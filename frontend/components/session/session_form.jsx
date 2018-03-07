@@ -5,13 +5,17 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "Email Address",
-      password: "Password"
+      username: "",
+      password: ""
     };
+    this.changeModal = this.changeModal.bind(this);
+  }
+
+  componentWillUnmount() {
+    this.props.clearErrors();
   }
 
   handleSubmit(e) {
-    // debugger
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
@@ -19,6 +23,10 @@ class SessionForm extends React.Component {
 
   update(field) {
     return e => this.setState({ [field]: e.currentTarget.value });
+  }
+
+  changeModal() {
+    this.props.receiveCurrentModal(this.props.link);
   }
 
   renderErrors() {
@@ -36,6 +44,7 @@ class SessionForm extends React.Component {
   // }
 
   render() {
+    // debugger;
     return (
       <div className="session-form">
         <div className="form-input">
@@ -45,6 +54,7 @@ class SessionForm extends React.Component {
             <label>
               <input
                 type="text"
+                placeholder="Email Address"
                 value={this.state.username}
                 onChange={this.update("username")}
               />
@@ -52,6 +62,7 @@ class SessionForm extends React.Component {
             <label>
               <input
                 type="text"
+                placeholder="Password"
                 value={this.state.password}
                 onChange={this.update("password")}
               />
@@ -60,7 +71,7 @@ class SessionForm extends React.Component {
           </form>
           <div className="foot">
             <span>{this.props.text}</span>
-            {this.props.link}
+            <div onClick={this.changeModal}>{this.props.link}</div>
           </div>
         </div>
       </div>

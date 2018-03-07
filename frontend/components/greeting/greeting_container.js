@@ -1,16 +1,20 @@
-import Greeting from './greeting';
-import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
+import Greeting from "./greeting";
+import { connect } from "react-redux";
+import { logout } from "../../actions/session_actions";
+import { receiveCurrentModal } from "../../actions/ui_actions";
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    currentUser: state.session.currentUser
+    currentUser: state.session.currentUser,
+    currentModal: state.ui.modal.currentModal
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
+    receiveCurrentModal: currentModal =>
+      dispatch(receiveCurrentModal(currentModal))
   };
 };
 
