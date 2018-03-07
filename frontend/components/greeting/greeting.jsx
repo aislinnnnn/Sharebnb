@@ -8,8 +8,7 @@ export default class Greeting extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showLoginModal: false,
-      showSignupModal: false
+      currentModal: this.props.currentModal
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleOpenLoginModal = this.handleOpenLoginModal.bind(this);
@@ -24,27 +23,19 @@ export default class Greeting extends React.Component {
   }
 
   handleOpenLoginModal() {
-    this.setState({
-      showLoginModal: true
-    });
+    this.props.receiveCurrentModal("login");
   }
 
   handleOpenSignupModal() {
-    this.setState({
-      showSignupModal: true
-    });
+    this.props.receiveCurrentModal("signup");
   }
 
   handleCloseLoginModal() {
-    this.setState({
-      showLoginModal: false
-    });
+    this.props.receiveCurrentModal(null);
   }
 
   handleCloseSignupModal() {
-    this.setState({
-      showSignupModal: false
-    });
+    this.props.receiveCurrentModal(null);
   }
 
   render() {
@@ -76,7 +67,7 @@ export default class Greeting extends React.Component {
             <Modal
               className="modal"
               overlayClassName="overlay"
-              isOpen={this.state.showSignupModal}
+              isOpen={this.props.currentModal === "signup"}
               contentLabel="Sign Up Modal"
             >
               <div
@@ -97,7 +88,7 @@ export default class Greeting extends React.Component {
             <Modal
               className="modal"
               overlayClassName="overlay"
-              isOpen={this.state.showLoginModal}
+              isOpen={this.props.currentModal === "login"}
               contentLabel="Log In Modal"
             >
               <div
