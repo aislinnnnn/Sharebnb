@@ -6,6 +6,7 @@ import { login } from '../../actions/session_actions';
 
 const mapStateToProps = (state) => {
   return {
+    text: "Don't have an account?",
     errors: state.errors.session,
     greeting:"Log in to continue",
     formType: 'Log In',

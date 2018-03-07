@@ -8,6 +8,7 @@ import { signup } from '../../actions/session_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    text: "Already have an account?",
     errors: state.errors.session,
     greeting: "",
     formType: 'Sign Up',
