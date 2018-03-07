@@ -8,39 +8,68 @@
 }
 
 .form-input {
-  float:left;
-  width:600px;
+  float: left;
+  width: 600px;
   align-content: center;
 }
 
+.modal {
+  margin: auto;
+  width: 50%;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  background-color: white;
+  width: 700px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparentize(black, 0.3);
+}
+
+.close-button {
+  font-family: sans-serif;
+  font-size: 20px;
+  margin: 20px;
+  color: #484848;
+  font-weight: lighter;
+}
+
 .form-input input {
-  color:grey;
+  color: grey;
   font-size: 19px;
   font-weight: 100;
-  border: 1px solid #DBDBDB;
+  border: 1px solid #dbdbdb;
   border-radius: 4px;
-  width:600px;
+  width: 600px;
   height: 26px;
-  padding:10px;
+  padding: 10px;
   margin: 5px;
 }
 
 .form-input button {
-  font-weight:500;
+  font-weight: 500;
   border-radius: 4px;
   border: 0px;
   font-size: 18px;
-  width:622px;
-  color:white;
-  background-color: #FF5A5F;
+  width: 622px;
+  color: white;
+  background-color: #ff5a5f;
   height: 50px;
   margin: 5px;
 }
 
 .greeting {
-  padding:5px;
+  padding: 5px;
   font-size: 24px;
-  color:#484848;
+  color: #484848;
 }
 
 .form-input a {
@@ -57,10 +86,10 @@
 }
 
 .foot {
-  margin-top:20px;
+  margin-top: 20px;
   padding-top: 20px;
   width: 622px;
   display: flex;
   justify-content: center;
-  border-top: 1px solid #DBDBDB;
+  border-top: 1px solid #dbdbdb;
 }
