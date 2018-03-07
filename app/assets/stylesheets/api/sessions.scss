@@ -54,9 +54,15 @@
   margin: 5px;
 }
 
+.greeting {
+  color: #484848;
+  padding: 5px;
+  font-size: 24px;
+  font-family: sans-serif;
+}
 .form-input button {
   font-weight: 500;
-  border-radius: 4px;
+  border-radius: 2px;
   border: 0px;
   font-size: 18px;
   width: 622px;
@@ -66,23 +72,19 @@
   margin: 5px;
 }
 
-.greeting {
-  padding: 5px;
-  font-size: 24px;
-  color: #484848;
-}
-
 .form-input a {
   text-decoration: none;
   color: #008489;
   font-size: 20px;
+  font-family: sans-serif;
 }
 
 .foot span {
   font-weight: lighter;
   padding-right: 10px;
   font-size: 20px;
-  color: #008489;
+  color: #484848;
+  font-family: sans-serif;
 }
 
 .foot {
