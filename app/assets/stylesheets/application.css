@@ -18,35 +18,45 @@
   font-family: sans-serif;
 }
 
-.nav-bar {
-  height: 70px;
-  border-bottom: 1px solid lightgrey;
-  display: flex;
-  justify-content: space-between;
-  text-decoration: none;
-  position:relative;
+.app-image {
+  height: 675px;
+  width: 100%;
 }
 
-.nav-bar-right {
-  padding:23px;
-  position: relative;
-  height: 100%;
-  /* position:relative; */
-  /* top:35%; */
-
-}
-
-.nav-bar a {
-  padding-top: 20px;
-  padding:20px;
-  margin-top: 10px;
-  top:35%;
+.modal-button {
+  line-height: normal;
+  /* box-sizing: content-box; */
+  /* display: flex; */
+  border: none;
+  /* padding-top: 20px; */
+  padding: 20px;
+  /* margin-top: 10px; */
+  top: 35%;
   text-decoration: none;
   color: #484848;
   font-family: sans-serif;
   font-size: 13px;
 }
 
+.nav-bar {
+  height: 80px;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-bar-right {
+  /* padding:8px; */
+  position: relative;
+  height: 100%;
+  display: flex;
+
+  /* position:relative; */
+  /* top:35%; */
+}
+
 .logo {
-  height: 70px;
+  height: 80px;
 }
