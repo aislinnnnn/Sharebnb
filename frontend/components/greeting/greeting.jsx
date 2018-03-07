@@ -11,15 +11,22 @@ export default class Greeting extends React.Component {
       currentModal: this.props.currentModal
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleGuestLogin = this.handleGuestLogin.bind(this);
     this.handleOpenLoginModal = this.handleOpenLoginModal.bind(this);
-    this.handleOpenSignupModal = this.handleOpenSignupModal.bind(this);
     this.handleCloseLoginModal = this.handleCloseLoginModal.bind(this);
+    this.handleOpenSignupModal = this.handleOpenSignupModal.bind(this);
     this.handleCloseSignupModal = this.handleCloseSignupModal.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.logout();
+  }
+
+  handleGuestLogin(e) {
+    e.preventDefault();
+    const guestUser = { username: "guestuser", password: "password" };
+    this.props.login(guestUser);
   }
 
   handleOpenLoginModal() {
@@ -42,10 +49,25 @@ export default class Greeting extends React.Component {
     if (this.props.currentUser) {
       return (
         <div className="nav-bar">
-          <h1>{this.props.currentUser.username}</h1>
-          <button type="submit" onClick={this.handleSubmit}>
-            Logout
-          </button>
+          <div className="nav-bar-left">
+            <img
+              className="logo"
+              src="https://d3ui957tjb5bqd.cloudfront.net/uploads/2015/09/airbnb-2.jpg"
+            />
+          </div>
+          <div className="nav-bar-right">
+            <button
+              className="modal-button"
+              type="submit"
+              onClick={this.handleSubmit}
+            >
+              Logout
+            </button>
+            <img
+              className="profile-image"
+              src="https://www.cabe-africa.org/wp-content/uploads/2012/01/1.png"
+            />
+          </div>
         </div>
       );
     } else {
@@ -58,6 +80,9 @@ export default class Greeting extends React.Component {
             />
           </div>
           <div className="nav-bar-right">
+            <button className="modal-button" onClick={this.handleGuestLogin}>
+              Guest Log In
+            </button>
             <button
               className="modal-button"
               onClick={this.handleOpenSignupModal}

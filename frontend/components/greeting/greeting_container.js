@@ -1,6 +1,6 @@
 import Greeting from "./greeting";
 import { connect } from "react-redux";
-import { logout } from "../../actions/session_actions";
+import { logout, login } from "../../actions/session_actions";
 import { receiveCurrentModal } from "../../actions/ui_actions";
 
 const mapStateToProps = (state, ownProps) => {
@@ -13,6 +13,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     logout: () => dispatch(logout()),
+    login: user => dispatch(login(user)),
     receiveCurrentModal: currentModal =>
       dispatch(receiveCurrentModal(currentModal))
   };
