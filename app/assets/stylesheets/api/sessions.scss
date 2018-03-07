@@ -9,7 +9,7 @@
 
 .form-input {
   float: left;
-  width: 600px;
+  width: 530px;
   align-content: center;
 }
 
@@ -22,7 +22,7 @@
   right: 40px;
   bottom: 40px;
   background-color: white;
-  width: 700px;
+  width: 600px;
 }
 
 .overlay {
@@ -46,12 +46,11 @@
   color: grey;
   font-size: 19px;
   font-weight: 100;
-  border: 1px solid #dbdbdb;
-  border-radius: 4px;
-  width: 600px;
+  border: none;
+  width: 450px;
   height: 26px;
-  padding: 10px;
-  margin: 5px;
+  padding: 3px;
+  // margin: 5px;
 }
 
 .greeting {
@@ -65,7 +64,7 @@
   border-radius: 2px;
   border: 0px;
   font-size: 18px;
-  width: 622px;
+  width: 522px;
   color: white;
   background-color: #ff5a5f;
   height: 50px;
@@ -94,11 +93,38 @@
   font-family: sans-serif;
 }
 
+form {
+  width: 515px;
+  margin: 5px;
+}
+
 .foot {
   margin-top: 20px;
   padding-top: 20px;
-  width: 622px;
+  width: 522px;
   display: flex;
   justify-content: center;
   border-top: 1px solid #dbdbdb;
+}
+
+.errors {
+  color: #d93900;
+  padding: 10px 5px;
+  font-family: sans-serif;
+}
+
+.input-container {
+  width: 510px;
+  display: flex;
+  float: left;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.input-image {
+  height: 35px;
+  margin: 5px;
+  margin: auto;
 }

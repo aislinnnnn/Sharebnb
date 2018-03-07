@@ -30,11 +30,11 @@ export default class Greeting extends React.Component {
   }
 
   handleOpenLoginModal() {
-    this.props.receiveCurrentModal("login");
+    this.props.receiveCurrentModal("Log In");
   }
 
   handleOpenSignupModal() {
-    this.props.receiveCurrentModal("signup");
+    this.props.receiveCurrentModal("Sign Up");
   }
 
   handleCloseLoginModal() {
@@ -92,7 +92,7 @@ export default class Greeting extends React.Component {
             <Modal
               className="modal"
               overlayClassName="overlay"
-              isOpen={this.props.currentModal === "signup"}
+              isOpen={this.props.currentModal === "Sign Up"}
               contentLabel="Sign Up Modal"
             >
               <div
@@ -113,7 +113,7 @@ export default class Greeting extends React.Component {
             <Modal
               className="modal"
               overlayClassName="overlay"
-              isOpen={this.props.currentModal === "login"}
+              isOpen={this.props.currentModal === "Log In"}
               contentLabel="Log In Modal"
             >
               <div
