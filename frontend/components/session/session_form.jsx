@@ -71,7 +71,9 @@ class SessionForm extends React.Component {
           </form>
           <div className="foot">
             <span>{this.props.text}</span>
-            <div onClick={this.changeModal}>{this.props.link}</div>
+            <div onClick={this.changeModal}>
+              <div className="modal-link">{this.props.formType}</div>
+            </div>
           </div>
         </div>
       </div>

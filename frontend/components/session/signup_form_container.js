@@ -11,8 +11,7 @@ const mapStateToProps = (state, ownProps) => {
     text: "Already have an account?",
     errors: state.errors.session,
     greeting: "",
-    formType: "Sign Up",
-    link: "login"
+    formType: "Log In"
   };
 };
 
