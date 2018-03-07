@@ -4,9 +4,12 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signup } from '../../actions/session_actions';
 
+
+
 const mapStateToProps = (state, ownProps) => {
   return {
     errors: state.errors.session,
+    greeting: "",
     formType: 'Sign Up',
     link: <Link to="/login">Log In</Link>
   };
