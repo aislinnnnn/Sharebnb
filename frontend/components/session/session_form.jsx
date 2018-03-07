@@ -26,14 +26,16 @@ class SessionForm extends React.Component {
   }
 
   changeModal() {
-    this.props.receiveCurrentModal(this.props.link);
+    this.props.receiveCurrentModal(this.props.formType);
   }
 
   renderErrors() {
     return (
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>{error}</li>
+          <li className="errors" key={`error-${i}`}>
+            {error}
+          </li>
         ))}
       </ul>
     );
@@ -50,23 +52,35 @@ class SessionForm extends React.Component {
         <div className="form-input">
           <form onSubmit={this.handleSubmit.bind(this)}>
             <h1 className="greeting">{this.props.greeting}</h1>
+            <div className="input-container">
+              <label>
+                <input
+                  type="text"
+                  placeholder="Email Address"
+                  value={this.state.username}
+                  onChange={this.update("username")}
+                />
+              </label>
+              <img
+                className="input-image"
+                src="http://files.softicons.com/download/social-media-icons/free-social-media-icons-by-uiconstock/png/128x128/Email-Icon.png"
+              />
+            </div>
+            <div className="input-container">
+              <label>
+                <input
+                  type="text"
+                  placeholder="Password"
+                  value={this.state.password}
+                  onChange={this.update("password")}
+                />
+              </label>
+              <img
+                className="input-image"
+                src="https://cdn4.iconfinder.com/data/icons/mayssam/512/lock-512.png"
+              />
+            </div>
             {this.renderErrors()}
-            <label>
-              <input
-                type="text"
-                placeholder="Email Address"
-                value={this.state.username}
-                onChange={this.update("username")}
-              />
-            </label>
-            <label>
-              <input
-                type="text"
-                placeholder="Password"
-                value={this.state.password}
-                onChange={this.update("password")}
-              />
-            </label>
             <button>{this.props.formType}</button>
           </form>
           <div className="foot">
