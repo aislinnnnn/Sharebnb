@@ -11,4 +11,4 @@ User.create(username:'aislinn', password:'password')
 
 Spot.create(title:"App Academy", location:"Manhattan, NY", price:100.00, host_id: 1, num_guests:10, num_beds: 5, num_baths: 2, num_bedrooms:2, description:"Fun place", rules:"None", image_url: "https://a0.muscache.com/airbnb/static/engagement/overlay_panel7-58b03c50e1eac957ec12f6ced3bf7872.jpg")
 
-Spot.create(title:"Home", location:"Ardsley, NY", price:50.00, host_id: 2, num_guests:6, num_beds: 3, num_baths: 2, num_bedrooms:3, description:"home", rules:"None")
+Spot.create(title:"Home", location:"Ardsley, NY", price:50.00, host_id: 2, num_guests:6, num_beds: 3, num_baths: 2, num_bedrooms:3, description:"home", rules:"None", image_url: "https://a0.muscache.com/airbnb/static/engagement/overlay_panel7-58b03c50e1eac957ec12f6ced3bf7872.jpg")

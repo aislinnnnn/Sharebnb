@@ -1,6 +1,5 @@
 import React from 'react';
 import SpotIndexItem from './spot_index_item';
-import NavBarContainer from '../nav_bar/nav_bar_container';
 
 export default class SpotIndex extends React.Component {
   constructor(props){
@@ -31,23 +30,3 @@ export default class SpotIndex extends React.Component {
     );
   }
 }
-
-// if (spots.length !== 0 ){
-
-// } else {
-// return <div>NO SPOTS</div>;
-// }
-
-//   {this.props.spots.map((spot) => {
-//     return <SpotIndexItem spot={spot} />
-//   })
-// }
-
-
-// if (this.props.spots) {
-//   {this.props.spots.map((spot) => {
-//     return <SpotIndexItem spot={spot} />;
-//   });}
-// } else {
-//   return <div>NO SPOTS</div>;
-// }

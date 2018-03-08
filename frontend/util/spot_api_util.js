@@ -7,6 +7,7 @@ export const fetchSpots = () => {
 };
 
 export const fetchSpot = id => {
+  
   return $.ajax({
     method: "GET",
     url: `/api/spots/${id}`,

@@ -32,3 +32,13 @@ export const fetchSpots = () =>  {
     );
   };
 };
+
+export const fetchSpot = (id) => {
+  
+  return (dispatch) => {
+    return SpotAPI.fetchSpot(id)
+      .then((spot)=> dispatch(receiveSpot(spot)),
+      (errors) => dispatch(receiveSpotErrors(errors.responseJSON))
+    );
+  };
+};
