@@ -127,10 +127,6 @@ export default class Greeting extends React.Component {
               </Modal>
             </div>
           </div>
-          <img
-            className="app-image"
-            src="https://www.holidayguru.ie/wp-content/uploads/2017/01/Galway-2000px.jpg"
-          />
         </div>
       );
     }

@@ -26,7 +26,7 @@ class SessionForm extends React.Component {
   }
 
   changeModal() {
-    this.props.receiveCurrentModal(this.props.formType);
+    this.props.receiveCurrentModal(this.props.goTo);
   }
 
   renderErrors() {
@@ -46,7 +46,7 @@ class SessionForm extends React.Component {
   // }
 
   render() {
-    // debugger;
+    // ;
     return (
       <div className="session-form">
         <div className="form-input">
@@ -86,7 +86,7 @@ class SessionForm extends React.Component {
           <div className="foot">
             <span>{this.props.text}</span>
             <div onClick={this.changeModal}>
-              <div className="modal-link">{this.props.formType}</div>
+              <div className="modal-link">{this.props.goTo}</div>
             </div>
           </div>
         </div>
