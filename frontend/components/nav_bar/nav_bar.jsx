@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -15,10 +16,12 @@ export default class NavBar extends React.Component {
     return(
       <div className="nav-bar">
         <div className="nav-bar-left">
-          <img
-            className="logo"
-            src="https://d3ui957tjb5bqd.cloudfront.net/uploads/2015/09/airbnb-2.jpg"
-          />
+          <Link to="/">
+            <img
+              className="logo"
+              src="https://d3ui957tjb5bqd.cloudfront.net/uploads/2015/09/airbnb-2.jpg"
+            />
+          </Link>
         </div>
         <div className="nav-bar-right">
           <button
