@@ -7,3 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(username:'guestuser', password:'password')
+User.create(username:'aislinn', password:'password')
+
+Spot.create(title:"App Academy", location:"Manhattan, NY", price:100.00, host_id: 1, num_guests:10, num_beds: 5, num_baths: 2, num_bedrooms:2, description:"Fun place", rules:"None")
+
+Spot.create(title:"Home", location:"Ardsley, NY", price:50.00, host_id: 2, num_guests:6, num_beds: 3, num_baths: 2, num_bedrooms:3, description:"home", rules:"None")

@@ -10,13 +10,10 @@ const App = () => (
     <header>
       <GreetingContainer />
     </header>
-    <AuthRoute path="/login" component={LoginFormContainer} />
-    <AuthRoute path="/signup" component={SignupFormContainer} />
-    <img
-      className="app-image"
-      src="https://www.holidayguru.ie/wp-content/uploads/2017/01/Galway-2000px.jpg"
-    />
   </div>
 );
 
 export default App;
+
+// <AuthRoute path="/login" component={LoginFormContainer} />
+// <AuthRoute path="/signup" component={SignupFormContainer} />
