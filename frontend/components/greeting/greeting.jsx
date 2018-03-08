@@ -72,59 +72,65 @@ export default class Greeting extends React.Component {
       );
     } else {
       return (
-        <div className="nav-bar">
-          <div className="nav-bar-left">
-            <img
-              className="logo"
-              src="https://d3ui957tjb5bqd.cloudfront.net/uploads/2015/09/airbnb-2.jpg"
-            />
-          </div>
-          <div className="nav-bar-right">
-            <button className="modal-button" onClick={this.handleGuestLogin}>
-              Guest Log In
-            </button>
-            <button
-              className="modal-button"
-              onClick={this.handleOpenSignupModal}
-            >
-              Sign Up
-            </button>
-            <Modal
-              className="modal"
-              overlayClassName="overlay"
-              isOpen={this.props.currentModal === "Sign Up"}
-              contentLabel="Sign Up Modal"
-            >
-              <div
-                className="close-button"
-                onClick={this.handleCloseSignupModal}
+        <div>
+          <div className="nav-bar">
+            <div className="nav-bar-left">
+              <img
+                className="logo"
+                src="https://d3ui957tjb5bqd.cloudfront.net/uploads/2015/09/airbnb-2.jpg"
+              />
+            </div>
+            <div className="nav-bar-right">
+              <button className="modal-button" onClick={this.handleGuestLogin}>
+                Guest Log In
+              </button>
+              <button
+                className="modal-button"
+                onClick={this.handleOpenSignupModal}
               >
-                X
-              </div>
-              <SignupFormContainer />
-            </Modal>
+                Sign Up
+              </button>
+              <Modal
+                className="modal"
+                overlayClassName="overlay"
+                isOpen={this.props.currentModal === "Sign Up"}
+                contentLabel="Sign Up Modal"
+              >
+                <div
+                  className="close-button"
+                  onClick={this.handleCloseSignupModal}
+                >
+                  X
+                </div>
+                <SignupFormContainer />
+              </Modal>
 
-            <button
-              className="modal-button"
-              onClick={this.handleOpenLoginModal}
-            >
-              Log In
-            </button>
-            <Modal
-              className="modal"
-              overlayClassName="overlay"
-              isOpen={this.props.currentModal === "Log In"}
-              contentLabel="Log In Modal"
-            >
-              <div
-                className="close-button"
-                onClick={this.handleCloseLoginModal}
+              <button
+                className="modal-button"
+                onClick={this.handleOpenLoginModal}
               >
-                X
-              </div>
-              <LoginFormContainer />
-            </Modal>
+                Log In
+              </button>
+              <Modal
+                className="modal"
+                overlayClassName="overlay"
+                isOpen={this.props.currentModal === "Log In"}
+                contentLabel="Log In Modal"
+              >
+                <div
+                  className="close-button"
+                  onClick={this.handleCloseLoginModal}
+                >
+                  X
+                </div>
+                <LoginFormContainer />
+              </Modal>
+            </div>
           </div>
+          <img
+            className="app-image"
+            src="https://www.holidayguru.ie/wp-content/uploads/2017/01/Galway-2000px.jpg"
+          />
         </div>
       );
     }
