@@ -18,13 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // TESTING //
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.fetchSpot = fetchSpot;
+  window.fetchSpots = fetchSpots;
   // TESTING END //
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root);
 });
 
 // TESTING //
-window.fetchSpot = fetchSpot;
-window.fetchSpots = fetchSpots;
 window.logout = logout;
 window.signup = signup;

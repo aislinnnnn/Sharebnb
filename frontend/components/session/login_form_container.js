@@ -10,7 +10,8 @@ const mapStateToProps = state => {
     text: "Don't have an account?",
     errors: state.errors.session,
     greeting: "Log in to continue",
-    formType: "Sign Up"
+    formType: "Log In",
+    goTo: "Sign Up"
   };
 };
 
