@@ -2,6 +2,7 @@ import React from "react";
 import GreetingContainer from "./greeting/greeting_container";
 import { Route } from "react-router-dom";
 import SpotIndexContainer from './spots/spot_index_container';
+import SpotShowContainer from './spots/spot_show_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import { ProtectedRoute, AuthRoute } from "../util/route_util";
 
@@ -12,7 +13,7 @@ const App = () => (
     </header>
     <ProtectedRoute path="/" component={NavBarContainer} />
     <SpotIndexContainer />
-
+    <Route exact path="/spots/:id" component={SpotShowContainer} />
   </div>
 );
 
