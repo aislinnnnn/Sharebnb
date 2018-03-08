@@ -1,6 +1,6 @@
 import React from "react";
 import GreetingContainer from "./greeting/greeting_container";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import SpotIndexContainer from './spots/spot_index_container';
 import SpotShowContainer from './spots/spot_show_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
@@ -12,8 +12,10 @@ const App = () => (
       <AuthRoute exact path="/" component={GreetingContainer} />
     </header>
     <ProtectedRoute path="/" component={NavBarContainer} />
-    <SpotIndexContainer />
-    <Route exact path="/spots/:id" component={SpotShowContainer} />
+    <Switch>
+      <Route exact path="/spots/:id" component={SpotShowContainer} />
+      <SpotIndexContainer />
+    </Switch>
   </div>
 );
 
