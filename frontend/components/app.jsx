@@ -9,9 +9,11 @@ import { ProtectedRoute, AuthRoute } from "../util/route_util";
 const App = () => (
   <div>
     <header>
-      <AuthRoute exact path="/" component={GreetingContainer} />
+
+        <AuthRoute path="/" component={GreetingContainer} />
+        <ProtectedRoute path="/" component={NavBarContainer} />
+
     </header>
-    <ProtectedRoute path="/" component={NavBarContainer} />
     <Switch>
       <Route exact path="/spots/:id" component={SpotShowContainer} />
       <SpotIndexContainer />
@@ -20,11 +22,3 @@ const App = () => (
 );
 
 export default App;
-
-// <AuthRoute path="/login" component={LoginFormContainer} />
-// <AuthRoute path="/signup" component={SignupFormContainer} />
-
-
-// <GreetingContainer />
-
-// <SpotIndexContainer />
