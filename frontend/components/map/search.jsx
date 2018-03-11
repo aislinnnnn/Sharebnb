@@ -7,11 +7,11 @@ class Search extends React.Component {
 
     return(
       <div className="search">
+        <div className="search-index">
+          <SearchIndex  spots={this.props.spots} />
+        </div>
         <div className="spot-map">
           <SpotMap spots={this.props.spots} updateFilters={this.props.updateFilters}/>
-        </div>
-        <div >
-          <SearchIndex className="search-index" spots={this.props.spots} />
         </div>
       </div>
     );

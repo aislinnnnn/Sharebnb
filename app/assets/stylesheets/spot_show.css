@@ -1,0 +1,16 @@
+.show-img {
+  object-fit: cover;
+  width:100%;
+  min-height: 350px;
+  max-height: 400px;
+}
+
+.show-title {
+  font-size: 36px;
+  color: #484848;
+  padding: 5px;
+}
+
+.show-content {
+  padding:20px;
+}
