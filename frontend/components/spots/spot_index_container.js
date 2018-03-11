@@ -12,7 +12,7 @@ const msp = state => {
 
 const mdp =(dispatch) => {
   return {
-    fetchSpots: () => dispatch(fetchSpots())
+    fetchSpots: (data) => dispatch(fetchSpots(data))
   };
 };
 

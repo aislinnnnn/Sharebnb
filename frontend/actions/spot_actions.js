@@ -24,9 +24,9 @@ export const receiveSpotErrors = (errors) => {
   });
 };
 
-export const fetchSpots = () =>  {
+export const fetchSpots = (data) =>  {
   return (dispatch) => {
-    return SpotAPI.fetchSpots()
+    return SpotAPI.fetchSpots(data)
     .then((spots) => dispatch(receiveSpots(spots)),
     (errors) => dispatch(receiveSpotErrors(errors.responseJSON))
     );
@@ -34,7 +34,7 @@ export const fetchSpots = () =>  {
 };
 
 export const fetchSpot = (id) => {
-  
+
   return (dispatch) => {
     return SpotAPI.fetchSpot(id)
       .then((spot)=> dispatch(receiveSpot(spot)),

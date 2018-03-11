@@ -2,6 +2,7 @@ import React from 'react';
 import Search from './search';
 import { connect } from 'react-redux';
 import { fetchSpots } from '../../actions/spot_actions';
+import { updateFilters } from '../../actions/filter_actions';
 
 const msp = state => {
    
@@ -12,7 +13,7 @@ const msp = state => {
 
 const mdp = dispatch => {
   return({
-    fetchSpots: () => dispatch(fetchSpots)
+    updateFilters: (filter, value) => dispatch(updateFilters(filter, value))
   });
 };
 
