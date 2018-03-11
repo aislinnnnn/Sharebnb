@@ -4,6 +4,20 @@
 }
 
 .search {
-  display: grid;
-  grid-template-columns: 550px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.spot-map {
+  float:right;
+  padding:20px;
+}
+
+.search-index {
+  /* padding-left: 20px; */
+  padding:15px;
+  display: flex;
+  flex-wrap:wrap;
+  margin-left: -10px;
+  margin-top: -10px;
 }

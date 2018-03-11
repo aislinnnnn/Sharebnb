@@ -63,7 +63,7 @@ class SessionForm extends React.Component {
               </label>
               <img
                 className="input-image"
-                src="http://files.softicons.com/download/social-media-icons/free-social-media-icons-by-uiconstock/png/128x128/Email-Icon.png"
+                src="https://png.icons8.com/ios/50/000000/filled-message.png"
               />
             </div>
             <div className="input-container">
