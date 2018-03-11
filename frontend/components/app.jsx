@@ -5,7 +5,7 @@ import SpotIndexContainer from './spots/spot_index_container';
 import SpotShowContainer from './spots/spot_show_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import { ProtectedRoute, AuthRoute } from "../util/route_util";
-import SearchContainer from './map/seach_container';
+import SearchContainer from './map/search_container';
 
 export default class App extends React.Component {
 

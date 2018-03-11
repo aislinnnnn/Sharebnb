@@ -1,18 +1,10 @@
 import React from 'react';
-import SpotIndexItem from './spot_index_item';
+import SpotIndexItem from '../spots/spot_index_item';
 
-export default class SpotIndex extends React.Component {
-  constructor(props){
-    super(props);
-
-  }
-
-  componentDidMount(){
-
-    this.props.fetchSpots({bounds: {northEast: {lat:45, lng:-70}, southWest: {lat:35,lng:-75}}});
-  }
+export default class SearchIndex extends React.Component {
 
   renderSpots() {
+    debugger
     const spots = Object.values(this.props.spots);
 
     return spots.map((spot)=> {
@@ -23,7 +15,7 @@ export default class SpotIndex extends React.Component {
 
   render(){
       return(
-        <div className="spot-index">
+        <div className="search-index">
           <h1 className="spots-index">Explore Airbnb</h1>
           <h1 className="homes-header">Homes around the world</h1>
           {this.renderSpots()}

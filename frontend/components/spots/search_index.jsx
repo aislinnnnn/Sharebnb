@@ -8,8 +8,7 @@ export default class SpotIndex extends React.Component {
   }
 
   componentDidMount(){
-
-    this.props.fetchSpots({bounds: {northEast: {lat:45, lng:-70}, southWest: {lat:35,lng:-75}}});
+    this.props.fetchSpots({bounds:{northEast: {}, southWest: {}}});
   }
 
   renderSpots() {
