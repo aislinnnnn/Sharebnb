@@ -4,5 +4,6 @@
 }
 
 .search {
-  display: inline-grid;
+  display: grid;
+  grid-template-columns: 550px auto;
 }
