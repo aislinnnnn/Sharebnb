@@ -9,7 +9,7 @@ class Spot < ApplicationRecord
     max_lng = bounds[:northEast][:lng]
     min_lat = bounds[:southWest][:lat]
     min_lng = bounds[:southWest][:lng]
-    debugger
+     
     Spot.where('lat < ?', max_lat)
          .where('lat > ?', min_lat)
          .where('lng < ?', max_lng)
