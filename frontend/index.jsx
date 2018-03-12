@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import Root from "./components/root";
 import { login, logout, signup } from "./actions/session_actions";
 import configureStore from "./store/store";
-import { fetchSpot, fetchSpots } from "./util/spot_api_util";
+import { fetchBooking, fetchBookings, createBooking } from "./actions/booking_actions";
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -18,8 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // TESTING //
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.fetchSpot = fetchSpot;
-  window.fetchSpots = fetchSpots;
+  window.fetchBooking = fetchBooking;
+  window.fetchBookings = fetchBookings;
+  window.createBooking = createBooking;
   // TESTING END //
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root);

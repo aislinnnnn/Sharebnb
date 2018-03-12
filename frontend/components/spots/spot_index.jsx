@@ -3,10 +3,6 @@ import SpotIndexItem from './spot_index_item';
 import { Link } from 'react-router-dom';
 
 export default class SpotIndex extends React.Component {
-  constructor(props){
-    super(props);
-
-  }
 
   componentDidMount(){
 

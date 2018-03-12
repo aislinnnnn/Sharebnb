@@ -1,7 +1,13 @@
 class User < ApplicationRecord
   validates :username, :password_digest, :session_token, presence:true
-  validates :username, :session_token, uniqueness:true 
+  validates :username, :session_token, uniqueness:true
   validates :password, length: {minimum:6, allow_nil:true }
+
+  has_many :bookings
+  has_many :spots,
+    primary_key: :id,
+    class_name: :Booking,
+    foreign_key: :host_id
 
   attr_reader :password
 

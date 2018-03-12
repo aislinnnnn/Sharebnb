@@ -11,6 +11,6 @@ User.create(username:'aislinn', password:'password')
 
 Spot.create(title:"App Academy", location:"Manhattan, NY", price:100.00, host_id: 1, num_guests:10, num_beds: 5, num_baths: 2, num_bedrooms:2, description:"Fun place", rules:"None", lat:40.751465, lng:-73.983930)
 
-Spot.create(title:"Home", location:"Ardsley, NY", price:50.00, host_id: 2, num_guests:6, num_beds: 3, num_baths: 2, num_bedrooms:3, description:"home", rules:"None", lat:41.009335, lng: -73.841435)
+s = Spot.create(title:"Home", location:"Ardsley, NY", price:50.00, host_id: 2, num_guests:6, num_beds: 3, num_baths: 2, num_bedrooms:3, description:"home", rules:"None", lat:41.009335, lng: -73.841435)
 
 Spot.create(title:"Random", location:"Random", price:60.00, host_id: 2, num_guests:3, num_beds: 3, num_baths: 2, num_bedrooms:3, description:"random", rules:"random", lat:42.009335, lng: -73.841435)

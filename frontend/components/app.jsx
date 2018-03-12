@@ -6,6 +6,7 @@ import SpotShowContainer from './spots/spot_show_container';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import { ProtectedRoute, AuthRoute } from "../util/route_util";
 import SearchContainer from './map/search_container';
+import BookingIndexContainer from './bookings/booking_index_container';
 
 export default class App extends React.Component {
 
@@ -22,6 +23,7 @@ export default class App extends React.Component {
         <Switch>
           <Route exact path="/spots/:id" component={SpotShowContainer} />
           <Route exact path="/search" component={SearchContainer}/>
+          <Route exact path="/bookings" component={BookingIndexContainer} />
           <Route path="/" component={SpotIndexContainer} />
         </Switch>
       </div>

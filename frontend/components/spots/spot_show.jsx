@@ -1,6 +1,7 @@
 import React from 'react';
 import SpotIndexItem from './spot_index_item';
 import SpotMap from '../map/spot_map';
+import BookingFormContainer from '../bookings/booking_form_container';
 
 export default class SpotShow extends React.Component {
 
@@ -10,6 +11,7 @@ export default class SpotShow extends React.Component {
 
   render () {
     const spot = this.props.spot;
+
     if (spot) {
       return(
         <div className="spot-show">
@@ -46,10 +48,9 @@ export default class SpotShow extends React.Component {
               </div>
             </div>
             <div className="booking">
-              BOOKINGS
+              <BookingFormContainer spot={this.props.spot} />
             </div>
           </div>
-          <SpotMap spots={this.props.spot} updateFilters={this.props.updateFilters}/>
         </div>
       );
     } else {
@@ -59,3 +60,5 @@ export default class SpotShow extends React.Component {
   }
 
 }
+
+// <SpotMap spots={[this.props.spot]} updateFilters={this.props.updateFilters}/>
