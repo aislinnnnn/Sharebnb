@@ -2,6 +2,7 @@ import * as BookingAPI from '../util/booking_api_util';
 export const RECEIVE_BOOKINGS = "RECEIVE_BOOKINGS";
 export const RECEIVE_BOOKING = "RECEIVE_BOOKING";
 export const RECEIVE_BOOKING_ERRORS = "RECEIVE_BOOKING_ERRORS";
+export const REMOVE_BOOKING = "REMOVE_BOOKING";
 
 export const receiveBookings = (bookings) => {
   return({
@@ -14,6 +15,13 @@ export const receiveBooking = (booking) => {
   return({
     type: RECEIVE_BOOKING,
     booking
+  });
+};
+
+export const removeBooking = (id) => {
+  return({
+    type: REMOVE_BOOKING,
+    id
   });
 };
 
@@ -52,5 +60,14 @@ export const createBooking = booking => {
       return dispatch(receiveBookingErrors(errors.responseJSON));
       }
     );
+  };
+};
+
+export const deleteBooking = id => {
+  return dispatch => {
+    return BookingAPI.deleteBooking(id)
+    .then(() => {
+      return dispatch(removeBooking(id));
+    });
   };
 };

@@ -24,6 +24,9 @@ export default class NavBar extends React.Component {
           </Link>
         </div>
         <div className="nav-bar-right">
+        <Link className="nav-button" to="/bookings">
+            Trips
+        </Link>
           <button
             className="modal-button"
             type="submit"
