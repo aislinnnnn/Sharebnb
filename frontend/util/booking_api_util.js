@@ -1,0 +1,21 @@
+export const fetchBookings = () => {
+  return $.ajax({
+    method: 'GET',
+    url: '/api/bookings',
+  });
+};
+
+export const fetchBooking = (id) => {
+   return $.ajax({
+     method:'GET',
+     url: `/api/bookings/${id}`,
+   });
+ };
+
+export const createBooking = (booking) => {
+  return $.ajax({
+    url: '/api/bookings',
+    method: 'POST',
+    data:{booking: booking}
+  });
+};
