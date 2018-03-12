@@ -3,7 +3,8 @@ import { merge } from 'lodash';
 
 
 const defaultFilters = {
-  bounds: {northEast: {}, southWest: {}}
+  bounds: {northEast: {}, southWest: {}},
+  maxGuests: 1
 };
 
 const filterReducer = (oldState = defaultFilters, action) => {

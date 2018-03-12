@@ -2,6 +2,7 @@ import React from 'react';
 import SpotShow from './spot_show';
 import { connect } from 'react-redux';
 import { fetchSpot } from '../../actions/spot_actions';
+import { updateFilters } from '../../actions/filter_actions';
 
 const msp = (state, ownProps) => {
   return {
@@ -11,7 +12,8 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch) => {
   return {
-    fetchSpot: (id) => dispatch(fetchSpot(id))
+    fetchSpot: (id) => dispatch(fetchSpot(id)),
+    updateFilters: (filter, value) => dispatch(updateFilters(filter, value))
   };
 };
 

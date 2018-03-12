@@ -5,9 +5,10 @@ import { fetchSpots } from '../../actions/spot_actions';
 import { updateFilters } from '../../actions/filter_actions';
 
 const msp = state => {
-   
+  
   return({
-    spots: state.entities.spots
+    spots: state.entities.spots,
+    maxGuests: state.ui.filter.maxGuests
   });
 };
 

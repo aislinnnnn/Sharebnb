@@ -23,7 +23,7 @@ export default class SpotIndex extends React.Component {
   render(){
       return(
         <div className="spot-index">
-          <h1 className="spots-index">Explore Airbnb</h1>
+          <h1 className="spots-index">Explore Sharebnb</h1>
           <h1 className="homes-header">Homes around the world</h1>
           {this.renderSpots()}
       </div>
