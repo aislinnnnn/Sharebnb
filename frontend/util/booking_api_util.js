@@ -19,3 +19,10 @@ export const createBooking = (booking) => {
     data:{booking: booking}
   });
 };
+
+export const deleteBooking = (id) => {
+  return $.ajax({
+    url: `/api/bookings/${id}`,
+    method: 'DELETE'
+  });
+};

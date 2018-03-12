@@ -11,7 +11,7 @@ class BookingIndex extends React.Component {
   renderBookings() {
     const bookings = Object.values(this.props.bookings);
     return bookings.map((booking)=> {
-      return <div><BookingIndexItem booking={booking} /></div>;
+      return <div><BookingIndexItem booking={booking} deleteBooking={this.props.deleteBooking} /></div>;
     });
   }
 
