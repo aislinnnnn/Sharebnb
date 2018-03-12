@@ -20,20 +20,39 @@ export default class SpotShow extends React.Component {
           <div >
             <img className="show-img" src={spot.image_url} />
           </div>
-          <div className="show-content">
-              <h1 className="show-title">{spot.title}</h1>
-              <span>{spot.location}</span>
-              <ul>
-                <li>{spot.num_guests} guests</li>
-                <li>{spot.num_bedrooms} bedrooms</li>
-                <li>{spot.num_beds} beds</li>
-                <li>{spot.num_baths} baths</li>
-              </ul>
-              <p>{this.description}</p>              <h2>Amenities</h2>
-              <h2>House Rules</h2>
-              <p>{spot.ruless}</p>
-              <h1>Reviews</h1>
+          <div className="content-booking-container">
+            <div className="show-content">
+              <div className="show-header">
+                <h1 className="show-title">{spot.title}</h1>
+                <span className="show-location">{spot.location}</span>
+                <ul className="stats">
+                  <li><img className="icon" src="https://png.icons8.com/ios-glyphs/50/000000/conference-call.png"/>{spot.num_guests} guests</li>
+                  <li><img
+                    className="icon"
+                     src="https://png.icons8.com/ios/50/000000/door-filled.png"/>{spot.num_bedrooms} bedrooms</li>
+                   <li><img
+                     className="icon" src="https://png.icons8.com/ios/50/000000/bed-filled.png"/>{spot.num_beds} beds</li>
+                   <li><img
+                     className="icon" src="https://png.icons8.com/ios/50/000000/bath-filled.png"/>{spot.num_baths} baths</li>
+                </ul>
+                <p className="show-description">{spot.description}</p>
+              </div>
+              <div className="info-container">
+                <h2 className="show-bold">Amenities</h2>
+                <p className="show-thin">List of amenities from join table</p>
+              </div>
+              <div className="info-container">
+                <h2 className="show-bold">House Rules</h2>
+                <p className="show-thin">{spot.rules}</p>
+              </div>
+              <div className="info-container">
+                <h1 className="show-bold">Reviews</h1>
+              </div>
             </div>
+            <div className="booking">
+              BOOKINGS
+            </div>
+          </div>
         </div>
       );
     } else {
