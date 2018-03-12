@@ -1,14 +1,10 @@
 import React from 'react';
 import SpotIndexItem from './spot_index_item';
+import SpotMap from '../map/spot_map';
 
 export default class SpotShow extends React.Component {
-  constructor(props){
-    super(props);
-
-  }
 
   componentDidMount() {
-
     this.props.fetchSpot(this.props.match.params.id);
   }
 
@@ -53,6 +49,7 @@ export default class SpotShow extends React.Component {
               BOOKINGS
             </div>
           </div>
+          <SpotMap spots={this.props.spot} updateFilters={this.props.updateFilters}/>
         </div>
       );
     } else {

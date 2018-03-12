@@ -25,7 +25,7 @@ export default class SpotIndex extends React.Component {
   render(){
       return(
         <div className="spot-index-wrapper">
-          <h1 className="homes-header">Explore Airbnb</h1>
+          <h1 className="homes-header">Explore Sharebnb</h1>
           <Link to="/search">
             <div className="search-link">
               <div className="img"></div>

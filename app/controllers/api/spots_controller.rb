@@ -1,8 +1,14 @@
 class Api::SpotsController < ApplicationController
   def index
-    
+
     @spots = Spot.in_bounds(params[:bounds]) || Spot.all
+
+    if params[:maxGuests]
+      max_num = params[:maxGuests]
+      @spots = @spots.where('num_guests > ?', max_num)
+    end
   end
+
 
   def show
 
@@ -19,7 +25,7 @@ class Api::SpotsController < ApplicationController
   end
 
   def spot_params
-    params.require(:spot).permit(:id, :title, :location, :price, :host_id, :num_guests, :num_beds, :num_baths, :num_bedrooms, :description, :rules, :image_url, :bounds)
+    params.require(:spot).permit(:id, :title, :location, :price, :host_id, :num_guests, :num_beds, :num_baths, :num_bedrooms, :description, :rules, :image_url, :bounds, :maxGuests)
   end
 
 end

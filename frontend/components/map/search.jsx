@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchIndex from './search_index';
 import SpotMap from './spot_map';
+import FilterForm from './filter_form';
 
 class Search extends React.Component {
   render() {
@@ -20,3 +21,11 @@ class Search extends React.Component {
 }
 
 export default Search;
+
+
+//   <div className="filter-form">
+//     <FilterForm
+//       maxGuests={this.props.maxGuests}
+//       updateFilter={this.props.updateFilter}
+// />
+//   </div>
