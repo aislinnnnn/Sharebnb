@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ input:focus {
+     outline:none;
+ }
+
 * {
   font-family: sans-serif;
 }
@@ -89,10 +93,7 @@ button.modal-button:hover {
   justify-content: flex-start;
 }
 
-.search-icon {
-  height: 20px;
-  padding:5px;
-}
+
 
 .logo {
   height: 80px;
@@ -100,10 +101,4 @@ button.modal-button:hover {
 
 .nav-bar-left {
   display: flex;
-}
-
-.nav-search-bar {
-  width:100px;
-  padding: 30px;
-  /* border: 1px solid lightgrey; */
 }

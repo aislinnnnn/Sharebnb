@@ -11,20 +11,22 @@ class BookingIndex extends React.Component {
   renderBookings() {
     const bookings = Object.values(this.props.bookings);
     return bookings.map((booking)=> {
-      return <div><BookingIndexItem booking={booking} deleteBooking={this.props.deleteBooking} /></div>;
+      return <div className="single-booking"><BookingIndexItem booking={booking} deleteBooking={this.props.deleteBooking} /></div>;
     });
   }
 
   render() {
     if (this.props.currentUser) {
       return(
-        <div className="booking-index">
-          {this.renderBookings()}
+        <div className="booking-index-container">
+          <div className="booking-index">
+            {this.renderBookings()}
+          </div>
         </div>
       );
     } else {
       this.props.receiveCurrentModal("Log In");
-      return <div>You must be logged in to view your bookings!</div>;
+      return <div className="not-logged-in">You must be logged in to view your bookings!</div>;
     }
   }
 }
