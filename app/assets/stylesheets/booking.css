@@ -1,0 +1,18 @@
+.book-price {
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+}
+
+.small-booking {
+  font-size: 12px;
+  line-height: 16px;
+  padding:7px;
+}
+ .price-div {
+   display: flex;
+   color: #484848;
+   border-bottom: 1px solid lightgrey;
+   padding:10px;
+   margin-bottom: 20px;
+ }

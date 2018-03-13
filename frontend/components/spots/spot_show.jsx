@@ -2,8 +2,9 @@ import React from 'react';
 import SpotIndexItem from './spot_index_item';
 import SpotMap from '../map/spot_map';
 import BookingFormContainer from '../bookings/booking_form_container';
+import { withRouter } from 'react-router';
 
-export default class SpotShow extends React.Component {
+class SpotShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchSpot(this.props.match.params.id);
@@ -51,6 +52,11 @@ export default class SpotShow extends React.Component {
               <BookingFormContainer spot={this.props.spot} />
             </div>
           </div>
+          <SpotMap spot={this.props.spot}
+            spotId={this.props.spot.id}
+            showPage={true}
+            fetchSpot={this.props.fetchSpot}
+            updateFilters={this.props.updateFilters}/>
         </div>
       );
     } else {
@@ -61,4 +67,4 @@ export default class SpotShow extends React.Component {
 
 }
 
-// <SpotMap spots={[this.props.spot]} updateFilters={this.props.updateFilters}/>
+export default withRouter(SpotShow);
