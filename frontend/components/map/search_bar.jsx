@@ -17,9 +17,14 @@ class SearchBar extends React.Component {
     const that = this;
     geocoder.geocode({'address':address}, function(results, status){
       if (status === 'OK') {
+        debugger
         const center = results[0].geometry.location;
-        that.props.map.setCenter(center);
-        that.props.map.setZoom(12);
+        console.log(center);
+        const lat = center.lat();
+        const lng = center.lng();
+        that.props.history.push(`/search/?lat=${lat}&lng=${lng}`);
+        // that.props.map.setCenter(center);
+        // that.props.map.setZoom(12);
       } else {
         console.log(status);
       }
