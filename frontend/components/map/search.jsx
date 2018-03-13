@@ -3,15 +3,12 @@ import SearchIndex from './search_index';
 import SpotMap from './spot_map';
 import FilterForm from './filter_form';
 import SearchBar from './search_bar';
+import { withRouter } from 'react-router-dom';
+
 
 class Search extends React.Component {
   render() {
-    let center;
-    if (this.state) {
-      center = this.state.center;
-    } else {
-      center = "hi";
-    }
+    
 
     return(
       <div className="search">
@@ -21,7 +18,6 @@ class Search extends React.Component {
         </div>
         <div className="spot-map">
           <SpotMap spots={this.props.spots} updateFilters={this.props.updateFilters}
-            center={center}
             />
         </div>
       </div>
@@ -30,7 +26,7 @@ class Search extends React.Component {
 
 }
 
-export default Search;
+export default withRouter(Search);
 
 
 //   <div className="filter-form">

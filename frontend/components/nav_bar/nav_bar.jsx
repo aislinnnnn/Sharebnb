@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import SearchBar from '../map/search_bar';
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -22,6 +23,9 @@ export default class NavBar extends React.Component {
               src="https://d3ui957tjb5bqd.cloudfront.net/uploads/2015/09/airbnb-2.jpg"
             />
           </Link>
+          <div className="nav-search-bar">
+            <SearchBar />
+          </div>
         </div>
         <div className="nav-bar-right">
         <Link className="nav-button" to="/bookings">

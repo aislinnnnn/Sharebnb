@@ -84,6 +84,26 @@ button.modal-button:hover {
   /* top:35%; */
 }
 
+.search {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.search-icon {
+  height: 20px;
+  padding:5px;
+}
+
 .logo {
   height: 80px;
+}
+
+.nav-bar-left {
+  display: flex;
+}
+
+.nav-search-bar {
+  width:100px;
+  padding: 30px;
+  /* border: 1px solid lightgrey; */
 }

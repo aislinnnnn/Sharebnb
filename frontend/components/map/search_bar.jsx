@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
+import queryString from 'query-string';
 
 class SearchBar extends React.Component {
   constructor(props){
@@ -17,14 +18,12 @@ class SearchBar extends React.Component {
     const that = this;
     geocoder.geocode({'address':address}, function(results, status){
       if (status === 'OK') {
-        debugger
+
         const center = results[0].geometry.location;
         console.log(center);
         const lat = center.lat();
         const lng = center.lng();
         that.props.history.push(`/search/?lat=${lat}&lng=${lng}`);
-        // that.props.map.setCenter(center);
-        // that.props.map.setZoom(12);
       } else {
         console.log(status);
       }
@@ -40,12 +39,15 @@ class SearchBar extends React.Component {
     return(
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>Address:</label>
+          <div  className="search"><img className="search-icon" src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png" />
             <input
+              className="search-input"
+              placeholder="Search"
               type="text"
               value={this.state.address}
               onChange={this.update()}
               />
+          </div>
         </form>
       </div>
     );
