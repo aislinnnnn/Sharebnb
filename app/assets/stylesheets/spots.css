@@ -1,10 +1,12 @@
 .homes-header {
+  letter-spacing: .2px;
   font-family: sans-serif;
   font-size: 28px;
   font-weight: 550;
   padding: 10px;
   margin-top: 25px;
   color: #484848;
+  margin-bottom: 10px;
 }
 
 .explore-header {
@@ -21,13 +23,21 @@
   width:100px;
 
 }
+
+.homes-search {
+  font-weight: 600;
+  width: 130px;
+  position:relative;
+  padding-left: 20px;
+  padding-top: 12px;
+}
+
 .search-link {
   margin-left: 10px;
-  padding-left: 30px;
-  padding:10px;
+  /* padding:10px; */
   text-decoration: none;
-  height: 50px;
-  width: 245px;
+  height: 70px;
+  width: 270px;
   border: 1px solid rgba(0,0,0,0.1);
   display: flex;
   font-size: 17px;
@@ -68,4 +78,14 @@
 
 .search-index {
   min-width: 800px;
+}
+
+.homes-search-img {
+  height: 70px;
+  width: 125px;
+  border-radius: 3px;
+}
+
+.explore-container {
+  display: flex;
 }
