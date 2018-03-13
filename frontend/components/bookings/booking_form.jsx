@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import { merge } from 'lodash';
 
+
 class BookingForm extends React.Component{
   constructor(props) {
     super(props);
@@ -45,33 +46,54 @@ class BookingForm extends React.Component{
         <div className="price-div">
           <h1 className="book-price">${this.props.spot.price}</h1><p className="small-booking">per night</p>
         </div>
-        <form onSubmit={this.handleSubmit}>
-          <label>Check-In</label>
-          <input
-            type="date"
-            value={check_in}
-            onChange={this.update('check_in')}
-            />
+        <div
+          className="form-container">
+          <form
 
-          <label>Check-Out</label>
-          <input
-            type="date"
-            value={check_out}
-            onChange={this.update('check_out')}
-            />
-
-          <label>Guests</label>
-          <input
-            type="number"
-            value={num_guests}
-            onChange={this.update('num_guests')}
-            />
-          <input
-            type="submit"
-            value="Request to Book"
-            />
-
-        </form>
+            onSubmit={this.handleSubmit}
+            >
+            <div className="book-input-container">
+              <div>
+                <label className="small-booking">Dates</label>
+                <div className="date-input">
+                  <div className="checkin">
+                    <input
+                      type="date"
+                      value={check_in}
+                      onChange={this.update('check_in')}
+                      />
+                  </div>
+                  <div className="checkout">
+                    <input
+                      type="date"
+                      value={check_out}
+                      onChange={this.update('check_out')}
+                      />
+                  </div>
+                </div>
+              </div>
+              <div className="guest-input-container">
+                <label className="small-booking-guest">Guests</label>
+                <div >
+                  <div classname="guest-input-form">
+                    <input
+                      className="guest-input"
+                      type="number"
+                      value={num_guests}
+                      onChange={this.update('num_guests')}
+                      />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input
+              className="submit-booking"
+              type="submit"
+              value="Request to Book"
+              />
+            <p className="booking-warning">You won't be charged yet</p>
+          </form>
+          </div>
       </div>
     );
   }

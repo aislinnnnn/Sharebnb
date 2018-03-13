@@ -12,6 +12,7 @@
     "query-string": "^5.1.0",
     "react": "^16.2.0",
     "react-datepicker": "^1.2.2",
+    "react-day-picker": "^7.1.2",
     "react-dom": "^16.2.0",
     "react-input-calendar": "^0.5.2",
     "react-modal": "^3.3.1",
@@ -39,5 +40,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.28.10"
+  }
 }

@@ -13,7 +13,7 @@ class SpotMap extends React.Component {
       const lng = this.props.spot.lng;
       mapOptions = {
         center: { lat: lat, lng:lng },
-        zoom:12
+        zoom:14
       };
     } else if (this.props.location.search) {
       const center = queryString.parse(this.props.location.search);

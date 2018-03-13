@@ -45,18 +45,24 @@ class SpotShow extends React.Component {
                 <p className="show-thin">{spot.rules}</p>
               </div>
               <div className="info-container">
-                <h1 className="show-bold">Reviews</h1>
+                <h1 className="show-bold-big">Reviews</h1>
+              </div>
+              <div className="info-container">
+                <h1 className="show-bold-big">The Neighborhood</h1>
+                  <p className="show-thin">This home is located in {this.props.spot.location}</p>
+                  <SpotMap spot={this.props.spot}
+                    spotId={this.props.spot.id}
+                    showPage={true}
+                    fetchSpot={this.props.fetchSpot}
+                    updateFilters={this.props.updateFilters}/>
+                  <p className="show-thin">The map shows this home's exact location.</p>
               </div>
             </div>
             <div className="booking">
               <BookingFormContainer spot={this.props.spot} />
             </div>
           </div>
-          <SpotMap spot={this.props.spot}
-            spotId={this.props.spot.id}
-            showPage={true}
-            fetchSpot={this.props.fetchSpot}
-            updateFilters={this.props.updateFilters}/>
+
         </div>
       );
     } else {
