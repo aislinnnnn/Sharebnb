@@ -15,7 +15,7 @@ class BookingIndexItem extends React.Component {
   render () {
 
       return(
-        <ul>
+        <ul className="single-booking">
           <li>{this.props.booking.spot.id}</li>
           <li>{this.props.booking.spot.title}</li>
           <li>{this.props.booking.id}</li>

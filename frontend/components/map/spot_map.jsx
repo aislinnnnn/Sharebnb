@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { withRouter } from 'react-router-dom';
 import MarkerManager from '../../util/marker_manager';
-import SearchBar from './search_bar';
+import queryString from 'query-string';
 
 class SpotMap extends React.Component {
 
@@ -15,6 +15,15 @@ class SpotMap extends React.Component {
         center: { lat: lat, lng:lng },
         zoom:12
       };
+    } else if (this.props.location.search) {
+      const center = queryString.parse(this.props.location.search);
+      const lat = parseFloat(center.lat);
+      const lng = parseFloat(center.lng);
+      const parsedCenter = {lat: lat, lng:lng};
+      mapOptions = {
+        center: parsedCenter,
+        zoom:12
+      }
     } else {
       mapOptions = {
         center: { lat: 20, lng:-30 },
@@ -24,6 +33,9 @@ class SpotMap extends React.Component {
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);
 
+    if (this.props.location.search) {
+
+    }
 
     this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
 
@@ -37,9 +49,33 @@ class SpotMap extends React.Component {
 
   }
 
+  componentWillReceiveProps(newProps) {
+    if (!this.props.showPage){
+      if (newProps.location.search !== this.props.location.search) {
+        const old = this.map.getCenter();
+        const oldCenter = {center: {lat:`${old.lat()}`, lng:`${old.lng()}` }}
+        const center = queryString.parse(newProps.location.search);
+        const newCenter = {center: center}
+        const lat = parseFloat(center.lat);
+        const lng = parseFloat(center.lng);
+        const parsedCenter = {lat: lat, lng:lng};
+
+
+
+        if ((Object.keys(center).length!== 0) && (newCenter.center.lat !== oldCenter.center.lat)){
+
+          this.map.setCenter(parsedCenter);
+          this.map.setZoom(12);
+        }
+        // }
+        this.MarkerManager.updateMarkers(this.props.spots);
+      }
+    }
+  }
+
   handleMarkerClick(spot) {
 
-    this.props.history.push(`spots/${spot.id}`);
+    this.props.history.push(`/spots/${spot.id}`);
   }
 
   setListeners() {
@@ -49,7 +85,7 @@ class SpotMap extends React.Component {
     const bounds = {
       northEast: { lat:north, lng:east },
       southWest: { lat: south, lng:west } };
-    this.props.updateFilters('bounds', bounds);
+      this.props.updateFilters('bounds', bounds);
     });
   }
 
@@ -66,7 +102,6 @@ class SpotMap extends React.Component {
   render() {
     return (
       <div>
-        <SearchBar map={this.map}/>
         <div className="map" ref={ map => this.mapNode = map}>Map</div>
       </div>
     );

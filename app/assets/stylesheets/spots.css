@@ -65,3 +65,7 @@
   padding-left:65px;
   padding-right:65px;
 }
+
+.search-index {
+  min-width: 800px;
+}

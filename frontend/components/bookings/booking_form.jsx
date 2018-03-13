@@ -42,7 +42,7 @@ class BookingForm extends React.Component{
     const {check_in, check_out, num_guests} = this.state;
     return(
       <div className="booking-form">
-        <div className="price">
+        <div className="price-div">
           <h1 className="book-price">${this.props.spot.price}</h1><p className="small-booking">per night</p>
         </div>
         <form onSubmit={this.handleSubmit}>
