@@ -44,7 +44,7 @@ class SearchBar extends React.Component {
             <img className="search-icon" src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png" />
             <input
               className="search-input"
-              placeholder="Anywhere &middot; Homes"
+              placeholder={this.props.placeholder}
               type="text"
               value={this.state.address}
               onChange={this.update()}

@@ -2,6 +2,7 @@ import Greeting from "./greeting";
 import { connect } from "react-redux";
 import { logout, login } from "../../actions/session_actions";
 import { receiveCurrentModal } from "../../actions/ui_actions";
+import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -19,4 +20,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Greeting);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Greeting));

@@ -1,10 +1,11 @@
 import React from "react";
 import Modal from "react-modal";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import LoginFormContainer from "../session/login_form_container";
 import SignupFormContainer from "../session/signup_form_container";
+import SearchBar from '../map/search_bar';
 
-export default class Greeting extends React.Component {
+class Greeting extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -46,9 +47,11 @@ export default class Greeting extends React.Component {
   }
 
   render() {
+      const searchContent = (this.props.location.pathname === '/') ?
+        null :
+        <SearchBar placeholder="Anywhere &middot; Homes" />;
 
       return (
-        <div>
           <div className="nav-bar">
             <div className="nav-bar-left">
               <Link to="/" >
@@ -57,6 +60,9 @@ export default class Greeting extends React.Component {
                 src="https://d3ui957tjb5bqd.cloudfront.net/uploads/2015/09/airbnb-2.jpg"
               />
             </Link>
+            <div className="nav-search-bar">
+              {searchContent}
+            </div>
             </div>
             <div className="nav-bar-right">
               <button className="modal-button" onClick={this.handleGuestLogin}>
@@ -105,11 +111,10 @@ export default class Greeting extends React.Component {
               </Modal>
             </div>
           </div>
-        </div>
       );
     }
   }
 
-
+export default withRouter(Greeting);
 // <Link to="/login">Log In</Link>
 // <Link to="/signup">Sign Up</Link>

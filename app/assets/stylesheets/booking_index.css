@@ -43,6 +43,7 @@
 }
 
 .title-header {
+  max-width: 450px;
   font-size: 17px;
   line-height: 22px;
   color:#484848;

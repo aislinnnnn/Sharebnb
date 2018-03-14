@@ -1,6 +1,7 @@
 import React from 'react';
 import SpotIndexItem from './spot_index_item';
 import { Link } from 'react-router-dom';
+import GreetingSearch from '../greeting/greeting_search';
 
 export default class SpotIndex extends React.Component {
 
@@ -19,8 +20,15 @@ export default class SpotIndex extends React.Component {
 
 
   render(){
+      const searchContent = this.props.currentUser ?
+      null :
+      <GreetingSearch />;
       return(
-        <div className="spot-index-wrapper">
+        <div>
+          <div>
+            {searchContent}
+          </div>
+          <div className="spot-index-wrapper">
             <h1 className="homes-header">Explore Sharebnb</h1>
             <div className="explore-container">
               <div>
@@ -63,11 +71,12 @@ export default class SpotIndex extends React.Component {
                 </Link>
               </div>
             </div>
-          <h1 className="homes-header">Homes around the world</h1>
-          <div className="spots">
-            {this.renderSpots()}
+            <h1 className="homes-header">Homes around the world</h1>
+            <div className="spots">
+              {this.renderSpots()}
+            </div>
           </div>
-      </div>
+        </div>
     );
   }
 }

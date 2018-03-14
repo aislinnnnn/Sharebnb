@@ -11,6 +11,7 @@
 }
 
 .search-bar {
+  background: white;
   border: 1px solid lightgrey;
   border-radius: 3px;
   box-shadow: 5px lightgrey;
@@ -31,4 +32,5 @@
 .search-icon {
   height: 27px;
   padding:8px;
+  border-right: 1px solid lightgrey;
 }
