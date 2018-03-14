@@ -14,8 +14,7 @@ const msp = state => {
 const mdp = dispatch => {
   return{
     deleteBooking: (id) => dispatch(deleteBooking(id)),
-    receiveCurrentModal:
-    (currentModal) => dispatch(receiveCurrentModal(currentModal)),
+    receiveCurrentModal:(currentModal) => dispatch(receiveCurrentModal(currentModal)),
     fetchBookings: () => dispatch(fetchBookings())
   };
 };

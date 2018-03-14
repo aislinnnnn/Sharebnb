@@ -3,6 +3,7 @@ import SpotIndexItem from './spot_index_item';
 import SpotMap from '../map/spot_map';
 import BookingFormContainer from '../bookings/booking_form_container';
 import { withRouter } from 'react-router';
+import ReviewIndexContainer from '../reviews/review_index_container';
 
 class SpotShow extends React.Component {
 
@@ -62,7 +63,7 @@ class SpotShow extends React.Component {
               <BookingFormContainer spot={this.props.spot} />
             </div>
           </div>
-
+          <ReviewIndexContainer />
         </div>
       );
     } else {
