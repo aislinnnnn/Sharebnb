@@ -24,7 +24,7 @@ export default class NavBar extends React.Component {
             />
           </Link>
           <div className="nav-search-bar">
-            <SearchBar />
+            <SearchBar placeholder="Anywhere &middot; Homes" />
           </div>
         </div>
         <div className="nav-bar-right">

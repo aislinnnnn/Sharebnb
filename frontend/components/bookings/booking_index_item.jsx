@@ -63,14 +63,15 @@ class BookingIndexItem extends React.Component {
   }
 
   render () {
-    debugger
+
       return(
           <div className="booking-item">
             <div className="booking-details">
               <div>
                 <h1 className="location-header">{this.props.booking.spot.location}</h1>
                 <div className="flex">
-                  <h3 className="title-header">{this.props.booking.num_guests} guests</h3>
+                  <h3 className="title-header">{this.props.booking.spot.title}</h3>
+                  <h3 className="title-header"> &middot;     {this.props.booking.num_guests} guests</h3>
                 </div>
                 <div className="dates-booking">
                   <div className="booking-date">
@@ -102,7 +103,7 @@ class BookingIndexItem extends React.Component {
             <div>
               <img
                 className="booking-image"
-                src={this.props.booking.spot.image_url} />
+                src={this.props.booking.image_url} />
 
             </div>
           </div>
@@ -111,7 +112,3 @@ class BookingIndexItem extends React.Component {
 }
 
 export default withRouter(BookingIndexItem);
-
-
-
-// <h3 className="title-header">{this.props.booking.spot.title} &middot;</h3>

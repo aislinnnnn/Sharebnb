@@ -30,9 +30,36 @@
   padding-right: 10px;
 }
 
-.app-image {
-  height: 675px;
-  width: 100%;
+.hero-image {
+    background-image:
+      linear-gradient(
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url("https://www.holidayguru.ie/wp-content/uploads/2017/01/Galway-2000px.jpg");
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-content {
+  /* text-align: center; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding-bottom: 75px;
+}
+
+.hero-text {
+  font-size: 48px;
+  font-family: sans-serif;
+  padding:20px;
+  padding-left: 0px;
+  text-shadow: 1px 1px 2px $black;
 }
 
 .modal-button {
