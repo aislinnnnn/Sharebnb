@@ -1,6 +1,6 @@
 import React from 'react';
 import BookingIndexItem from './booking_index_item';
-import { withRouter } from 'react-router';
+import { Link, withRouter } from 'react-router-dom';
 
 class BookingIndex extends React.Component {
 
@@ -16,7 +16,14 @@ class BookingIndex extends React.Component {
   }
 
   render() {
-    if (this.props.currentUser) {
+    if (Object.keys(this.props.bookings).length === 0 && (this.props.currentUser)) {
+      return(
+      <div className="not-logged-in">
+        You have no upcoming trips. <Link to="/search">Click here</Link> to search available homes and request to book!
+      </div>
+    );
+
+    } else if (this.props.currentUser) {
       return(
         <div className="booking-index-container">
           <div className="booking-index">

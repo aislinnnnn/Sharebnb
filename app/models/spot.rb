@@ -8,6 +8,8 @@ class Spot < ApplicationRecord
     class_name: :User,
     foreign_key: :host_id
   has_many :bookings
+  has_many :reviews
+  
 
   def self.in_bounds(bounds)
 

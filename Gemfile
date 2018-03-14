@@ -11,6 +11,8 @@ gem 'paperclip', '5.0.0'
 gem 'figaro'
 gem 'aws-sdk', '<3.0'
 
+gem 'validates_timeliness', '~> 4.0'
+
 gem 'annotate'
 gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

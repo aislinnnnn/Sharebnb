@@ -14,6 +14,10 @@ class BookingForm extends React.Component{
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillUnmount(){
+    this.props.clearErrors();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     if (this.props.currentUser) {
@@ -37,6 +41,18 @@ class BookingForm extends React.Component{
     return (e) =>this.setState({
       [field]: e.currentTarget.value
     });
+  }
+
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li className="errors" key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   render(){
@@ -86,6 +102,7 @@ class BookingForm extends React.Component{
                 </div>
               </div>
             </div>
+            {this.renderErrors()}
             <input
               className="submit-booking"
               type="submit"

@@ -9,6 +9,11 @@ class User < ApplicationRecord
     class_name: :Booking,
     foreign_key: :host_id
 
+  has_many :reviews,
+    primary_key: :id,
+    class_name: :User,
+    foreign_key: :author_id
+
   attr_reader :password
 
   after_initialize :ensure_session_token
