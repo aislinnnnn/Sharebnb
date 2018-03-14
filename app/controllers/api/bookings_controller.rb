@@ -27,7 +27,7 @@ class Api::BookingsController < ApplicationController
     if @booking.save
       render "api/bookings/show"
     else
-      render @booking.errors.full_messages, status:422
+      render json: @booking.errors.full_messages, status:422
     end
   end
 
@@ -38,7 +38,7 @@ class Api::BookingsController < ApplicationController
       render :show
     else
       render json: @booking.errors.full_messages, status:422
-    end 
+    end
   end
 
   def booking_params

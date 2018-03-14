@@ -30,6 +30,7 @@
 }
 
 .search-icon {
+  margin-top:1px;
   height: 27px;
   padding:8px;
   border-right: 1px solid lightgrey;

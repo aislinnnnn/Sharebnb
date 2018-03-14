@@ -2,6 +2,7 @@ import { RECEIVE_BOOKING, RECEIVE_BOOKINGS, REMOVE_BOOKING } from '../actions/bo
 import { merge } from 'lodash';
 
 const bookingsReducer = (oldState = {}, action) => {
+  ;
   Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_BOOKINGS:

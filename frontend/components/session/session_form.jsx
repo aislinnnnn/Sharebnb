@@ -41,12 +41,9 @@ class SessionForm extends React.Component {
     );
   }
 
-  // signupInputs() {
-  //   <input ...
-  // }
+
 
   render() {
-    // ;
     return (
       <div className="session-form">
         <div className="form-input">
@@ -69,7 +66,7 @@ class SessionForm extends React.Component {
             <div className="input-container">
               <label>
                 <input
-                  type="text"
+                  type="password"
                   placeholder="Password"
                   value={this.state.password}
                   onChange={this.update("password")}
@@ -94,6 +91,5 @@ class SessionForm extends React.Component {
     );
   }
 }
-// { this.props.formtype === signup ? this.signupInputs() : null }
 
 export default withRouter(SessionForm);
