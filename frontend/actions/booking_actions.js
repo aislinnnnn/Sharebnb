@@ -28,7 +28,6 @@ export const removeBooking = (id) => {
 };
 
 export const receiveBookingErrors = (errors) => {
-  ;
   return({
     type: RECEIVE_BOOKING_ERRORS,
     errors
@@ -66,7 +65,6 @@ export const createBooking = booking => {
         return dispatch(receiveBooking(booking));
       },
     (errors) => {
-      
       return dispatch(receiveBookingErrors(errors.responseJSON));
       }
     );

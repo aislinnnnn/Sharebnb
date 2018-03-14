@@ -91,7 +91,7 @@ class BookingForm extends React.Component{
               <div className="guest-input-container">
                 <label className="small-booking-guest">Guests</label>
                 <div >
-                  <div classname="guest-input-form">
+                  <div className="guest-input-form">
                     <input
                       className="guest-input"
                       type="number"
