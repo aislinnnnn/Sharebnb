@@ -1,5 +1,6 @@
 import React from 'react';
 import ReviewIndexItem from './review_index_item';
+import ReviewFormContainer from './review_form_container';
 import { Link, withRouter } from 'react-router-dom';
 
 class ReviewIndex extends React.Component {
@@ -57,6 +58,9 @@ class ReviewIndex extends React.Component {
         </div>
         <div className="review-index">
           {this.renderReviews()}
+        </div>
+        <div className="review-form">
+          <ReviewFormContainer />
         </div>
       </div>
     );

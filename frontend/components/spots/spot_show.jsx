@@ -46,7 +46,7 @@ class SpotShow extends React.Component {
                 <p className="show-thin">{spot.rules}</p>
               </div>
               <div className="info-container">
-                <h1 className="show-bold-big">Reviews</h1>
+                <ReviewIndexContainer />
               </div>
               <div className="info-container">
                 <h1 className="show-bold-big">The Neighborhood</h1>
@@ -63,7 +63,6 @@ class SpotShow extends React.Component {
               <BookingFormContainer spot={this.props.spot} />
             </div>
           </div>
-          <ReviewIndexContainer />
         </div>
       );
     } else {
