@@ -63,13 +63,13 @@ class BookingIndexItem extends React.Component {
   }
 
   render () {
+    debugger
       return(
           <div className="booking-item">
             <div className="booking-details">
               <div>
                 <h1 className="location-header">{this.props.booking.spot.location}</h1>
                 <div className="flex">
-                  <h3 className="title-header">{this.props.booking.spot.title} &middot;</h3>
                   <h3 className="title-header">{this.props.booking.num_guests} guests</h3>
                 </div>
                 <div className="dates-booking">
@@ -111,3 +111,7 @@ class BookingIndexItem extends React.Component {
 }
 
 export default withRouter(BookingIndexItem);
+
+
+
+// <h3 className="title-header">{this.props.booking.spot.title} &middot;</h3>
