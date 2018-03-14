@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 function ReviewIndexItem(props){
+  debugger;
   return(
     <div>
       <div>
