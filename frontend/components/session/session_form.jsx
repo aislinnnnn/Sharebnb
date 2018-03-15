@@ -41,7 +41,11 @@ class SessionForm extends React.Component {
     );
   }
 
-
+  handleGuestLogin(e) {
+    e.preventDefault();
+    const guestUser = { username: "guestuser", password: "password" };
+    this.props.login(guestUser);
+  }
 
   render() {
     return (
@@ -79,6 +83,9 @@ class SessionForm extends React.Component {
             </div>
             {this.renderErrors()}
             <button>{this.props.formType}</button>
+            <button className="modal-button" onClick={this.handleGuestLogin}>
+              Guest Log In
+            </button>
           </form>
           <div className="foot">
             <span>{this.props.text}</span>

@@ -2,10 +2,10 @@ class Api::SpotsController < ApplicationController
   def index
 
     @spots = Spot.in_bounds(params[:bounds]) || Spot.all
-
+    
     if params[:maxGuests]
       max_num = params[:maxGuests]
-      @spots = @spots.where('num_guests > ?', max_num)
+      @spots = @spots.where('num_guests >= ?', max_num)
     end
   end
 
