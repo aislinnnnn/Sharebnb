@@ -2,6 +2,7 @@ import React from 'react';
 import ReviewIndexItem from './review_index_item';
 import ReviewFormContainer from './review_form_container';
 import { Link, withRouter } from 'react-router-dom';
+import { round } from 'lodash';
 
 class ReviewIndex extends React.Component {
   componentDidMount(){
@@ -17,6 +18,7 @@ class ReviewIndex extends React.Component {
   }
 
   averageAccuracy() {
+
     const reviews = Object.values(this.props.reviews);
     let numReviews = reviews.length;
     if (numReviews > 0 ){
@@ -25,7 +27,7 @@ class ReviewIndex extends React.Component {
       reviews.forEach((review) => {
         sum += review.accuracy;
       });
-      return Math.round(sum/numReviews);
+      return round(sum/numReviews, 2);
     }
   }
 
@@ -38,7 +40,7 @@ class ReviewIndex extends React.Component {
       reviews.forEach((review) => {
         sum += review.communication;
       });
-      return Math.round(sum/numReviews);
+      return round(sum/numReviews, 2);
     }
   }
   averageCleanliness() {
@@ -50,7 +52,7 @@ class ReviewIndex extends React.Component {
       reviews.forEach((review) => {
         sum += review.cleanliness;
       });
-      return Math.round(sum/numReviews);
+      return round(sum/numReviews, 2);
     }
   }
   averageLocation() {
@@ -62,7 +64,7 @@ class ReviewIndex extends React.Component {
       reviews.forEach((review) => {
         sum += review.location;
       });
-      return Math.round(sum/numReviews);
+      return round(sum/numReviews, 2);
     }
   }
   averageCheckIn() {
@@ -74,33 +76,37 @@ class ReviewIndex extends React.Component {
       reviews.forEach((review) => {
         sum += review.checkin;
       });
-      return Math.round(sum/numReviews);
+      return round(sum/numReviews, 2);
     }
   }
   averageValue() {
-    // const reviews = Object.values(this.props.reviews);
-    // let numReviews = reviews.length;
-    // if (numReviews > 0 ){
-    //   let sum = 0;
-    //
-    //   reviews.forEach((review) => {
-    //     sum += review.value;
-    //   });
-    //   return Math.round(sum/numReviews);
-    // }
+    const reviews = Object.values(this.props.reviews);
+    let numReviews = reviews.length;
+    if (numReviews > 0 ){
+      let sum = 0;
+
+      reviews.forEach((review) => {
+        sum += review.value;
+      });
+      return round(sum/numReviews, 2);
+    }
     return 5;
   }
 
   averageRating() {
-    let average = (this.averageAccuracy()
-    + this.averageCommunication()
-    + this.averageCleanliness()
-    + this.averageLocation()
-    + this.averageCheckIn()
-    + this.averageValue())
-    /6;
+    const reviews = Object.values(this.props.reviews);
+    let numReviews = reviews.length;
+    if (numReviews > 0 ) {
+      let average = (this.averageAccuracy()
+      + this.averageCommunication()
+      + this.averageCleanliness()
+      + this.averageLocation()
+      + this.averageCheckIn()
+      + this.averageValue())
+      /6;
 
-    return Math.round(average);
+      return round(average, 2);
+    }
   }
 
   render() {

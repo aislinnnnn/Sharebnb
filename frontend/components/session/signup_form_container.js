@@ -18,6 +18,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
+    login: user => dispatch(login(user)),
     processForm: user => dispatch(signup(user)),
     receiveCurrentModal: currentModal =>
       dispatch(receiveCurrentModal(currentModal)),

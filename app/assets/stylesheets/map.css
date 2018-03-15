@@ -12,15 +12,16 @@
 .spot-map {
   float:right;
   padding:20px;
-  margin-top: 50px;
-  top: 50px;
+  margin-top: 0px;
+  /* top: 50px; */
 }
 
 .search-index {
   /* padding-left: 20px; */
+
   padding:15px;
   display: flex;
   flex-wrap:wrap;
   margin-left: -10px;
-  margin-top: -10px;
+  /* margin-top: 15px; */
 }

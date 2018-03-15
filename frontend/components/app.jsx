@@ -17,7 +17,7 @@ export default class App extends React.Component {
 
     return (
       <div>
-        <header>
+        <header className="sticky">
           { headerContent }
         </header>
         <Switch>

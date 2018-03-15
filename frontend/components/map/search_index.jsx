@@ -1,7 +1,8 @@
 import React from 'react';
 import SpotIndexItem from '../spots/spot_index_item';
+import { withRouter } from 'react-router-dom';
 
-export default class SearchIndex extends React.Component {
+class SearchIndex extends React.Component {
 
   renderSpots() {
 
@@ -25,3 +26,7 @@ export default class SearchIndex extends React.Component {
     );
   }
 }
+
+export default withRouter(SearchIndex);
+
+// <h1>Explore {Object.keys(this.props.spots).length} homes</h1>
