@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
       password: ""
     };
     this.changeModal = this.changeModal.bind(this);
+    this.handleGuestLogin = this.handleGuestLogin.bind(this);
   }
 
   componentWillUnmount() {
@@ -83,7 +84,7 @@ class SessionForm extends React.Component {
             </div>
             {this.renderErrors()}
             <button>{this.props.formType}</button>
-            <button className="modal-button" onClick={this.handleGuestLogin}>
+            <button onClick={this.handleGuestLogin}>
               Guest Log In
             </button>
           </form>

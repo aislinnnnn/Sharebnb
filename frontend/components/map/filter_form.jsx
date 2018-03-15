@@ -3,23 +3,55 @@ import React from 'react';
 class FilterForm extends React.Component {
   constructor(props){
     super(props);
-    this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      adults:1
+    };
+    this.handleApply = this.handleApply.bind(this);
+    this.handleMinus = this.handleMinus.bind(this);
+    this.handlePlus = this.handlePlus.bind(this);
   }
 
-  handleChange(e) {
-    this.props.updateFilters('maxGuests', parseInt(e.currentTarget.value));
+  handleApply(e) {
+    this.props.updateFilters('maxGuests', this.state.adults);
+    this.props.receiveCurrentModal(null);
+  }
+
+
+  handleMinus(){
+    let newAdults = this.state.adults - 1;
+    this.setState({
+      adults: newAdults
+    });
+  }
+
+  handlePlus(){
+    let newAdults = this.state.adults + 1;
+    this.setState({
+      adults: newAdults
+    });
   }
 
   render() {
     return(
       <div>
-        <div>Filter by guests:</div>
-        <label>Num of guests</label>
-        <input type="number"
-          value={this.props.maxGuests}
-          onChange={this.handleChange}
-          />
+        <div className="adults-filter">
+          <label>Adults</label>
+          <div className="adults-buttons">
+            <div
+              className="guests-click" onClick={this.handleMinus}> - </div>
+            <div className="num-adults">{this.state.adults}</div>
+            <div
+              className="guests-click"
+              onClick={this.handlePlus}>
+              + </div>
+          </div>
+        </div>
+        <div
+          className="apply-button"
+          onClick={this.handleApply}>Apply
+        </div>
       </div>
+
     );
   }
 }

@@ -12,9 +12,9 @@
 
 .search-bar {
   background: white;
-  border: 1px solid lightgrey;
+  border: 1px solid #dce0e0;
   border-radius: 3px;
-  box-shadow: 5px lightgrey;
+  box-shadow: 5px #dce0e0;
   width: 400px;
   height: 46px;
 }
@@ -22,7 +22,7 @@
 .nav-search-bar {
   width:100px;
   padding: 15px;
-  /* border: 1px solid lightgrey; */
+  /* border: 1px solid #dce0e0; */
 }
 
 .search {
@@ -33,5 +33,5 @@
   margin-top:1px;
   height: 27px;
   padding:8px;
-  border-right: 1px solid lightgrey;
+  border-right: 1px solid #dce0e0;
 }

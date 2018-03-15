@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchIndex from './search_index';
 import SpotMap from './spot_map';
-import FilterFormContainer from './filter_form_container';
+import FilterBarContainer from './filter_bar_container';
 import SearchBar from './search_bar';
 import { withRouter } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ class Search extends React.Component {
     return(
       <div>
         <div>
-          <FilterFormContainer />
+          <FilterBarContainer />
         </div>
         <div className="search">
           <div className="search-index">

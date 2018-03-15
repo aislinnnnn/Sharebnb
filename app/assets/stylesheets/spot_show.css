@@ -31,7 +31,7 @@
 }
 
 .show-header {
-  border-bottom: .5px solid lightgrey;
+  border-bottom: .5px solid #dce0e0;
 }
 
 .stats {
@@ -96,7 +96,7 @@
 }
 
 .info-container {
-  border-bottom: .5px solid lightgrey;
+  border-bottom: .5px solid #dce0e0;
 }
 
 .content-booking-container {
