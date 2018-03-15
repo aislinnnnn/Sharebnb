@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import StarRatingComponent from 'react-star-rating-component';
 
 function SpotIndexItem(props) {
 
@@ -11,6 +12,18 @@ function SpotIndexItem(props) {
           <li className="spot-location">{props.spot.location.toUpperCase()}</li>
           <li className="spot-title">{props.spot.title}</li>
           <li className="spot-price">${props.spot.price} per night</li>
+          <div style={{fontSize:10}} className="average-rating-index">
+            <StarRatingComponent
+              style={{padding:'20px'}}
+              name="star"
+              editing={false}
+              starCount={5}
+              value={props.spot.average_rating}
+              starColor={'#008489'}
+              emptyStarColor={'#dce0e0'}
+              starSpacing="5px"
+              />
+          </div>
         </ul>
       </Link>
     </div>

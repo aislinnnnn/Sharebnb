@@ -9,7 +9,7 @@ class Spot < ApplicationRecord
     foreign_key: :host_id
   has_many :bookings
   has_many :reviews
-  
+
 
   def self.in_bounds(bounds)
 
@@ -23,5 +23,18 @@ class Spot < ApplicationRecord
          .where('lng < ?', max_lng)
          .where('lng > ?', min_lng)
   end
+
+  def average_rating
+    if self.reviews.length == 0
+      return 0
+    end 
+    sum = 0
+    self.reviews.each do |review|
+      sum += review.average_rating
+    end
+    sum/ (self.reviews.length)
+
+  end
+
 
 end
