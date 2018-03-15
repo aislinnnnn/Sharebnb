@@ -1,0 +1,101 @@
+.review-header {
+  margin-top: 30px;
+  display: flex;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.rating-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-left {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  padding:5px;
+  padding-left: 0px;
+  font-family: sans-serif;
+  font-weight: 100;
+  color: #484848;
+  margin-top:10px;
+}
+
+.rating-right {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  padding:5px;
+  padding-right: 0px;
+  padding-left: 30px;
+  font-family: sans-serif;
+  font-weight: 100;
+  color: #484848;
+  margin-top:10px;
+}
+
+.average-rating {
+  margin-top: 29px;
+  padding-left: 15px
+}
+
+.single-review {
+  margin-bottom: 20px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.single-review-username {
+  padding:10px;
+  padding-bottom: 8px;
+  font-weight: 400;
+  color: #484848;
+  font-size: 19px;
+  line-height: 22px;
+  letter-spacing: 0.8px;
+}
+
+.single-review-date {
+  padding:10px;
+  padding-top:0px;
+  font-weight: 100;
+  color: #484848;
+}
+
+.review-body {
+  padding:10px;
+  font-weight: 100;
+  color: #484848;
+}
+
+.profile-image-review {
+  height: 40px;
+  margin: 10px;
+}
+
+.review-delete-button {
+  display: flex;
+  vertical-align: middle;
+}
+
+.review-delete-image {
+  margin-top:10px;
+  height: 20px;
+  padding:8px;
+}
+
+.delete-review {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.review-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
