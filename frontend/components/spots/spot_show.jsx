@@ -38,10 +38,6 @@ class SpotShow extends React.Component {
                 <p className="show-description">{spot.description}</p>
               </div>
               <div className="info-container">
-                <h2 className="show-bold">Amenities</h2>
-                <p className="show-thin">List of amenities from join table</p>
-              </div>
-              <div className="info-container">
                 <h2 className="show-bold">House Rules</h2>
                 <p className="show-thin">{spot.rules}</p>
               </div>

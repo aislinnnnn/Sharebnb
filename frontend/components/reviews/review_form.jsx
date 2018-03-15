@@ -40,7 +40,7 @@ class ReviewForm extends React.Component {
               value:"",
             });
           });
-
+          this.props.receiveCurrentModal(null);
       } else {
         this.props.receiveCurrentModal("Log In");
       }

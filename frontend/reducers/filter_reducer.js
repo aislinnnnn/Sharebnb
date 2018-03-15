@@ -4,7 +4,7 @@ import { merge } from 'lodash';
 
 const defaultFilters = {
   bounds: {northEast: {}, southWest: {}},
-  maxGuests: 100,
+  maxGuests: 1,
 };
 
 const filterReducer = (oldState = defaultFilters, action) => {

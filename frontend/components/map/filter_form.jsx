@@ -1,23 +1,27 @@
 import React from 'react';
 
+class FilterForm extends React.Component {
+  constructor(props){
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
 
-const handleChange = (filter, updateFilters) => (e) => {
-  return(
-    updateFilters(filter, parseInt(e.currentTarget.value))
-  );
-};
+  handleChange(e) {
+    this.props.updateFilters('maxGuests', parseInt(e.currentTarget.value));
+  }
 
-const FilterForm = (props) => {
-  return(
-    <div>
-      <div>Filter by guests:</div>
-      <label>Num of guests</label>
-      <input type="number"
-        value={props.maxGuests}
-        onChange={handleChange('maxGuests', props.updateFilters)}
-        />
-    </div>
-  );
-};
+  render() {
+    return(
+      <div>
+        <div>Filter by guests:</div>
+        <label>Num of guests</label>
+        <input type="number"
+          value={this.props.maxGuests}
+          onChange={this.handleChange}
+          />
+      </div>
+    );
+  }
+}
 
 export default FilterForm;

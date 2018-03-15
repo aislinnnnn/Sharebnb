@@ -23,6 +23,15 @@
   bottom: 40px;
   background-color: white;
   width: 600px;
+  outline: none;
+}
+
+button:active {
+  outline: none;
+}
+
+.modal:active {
+  outline:none;
 }
 
 .overlay {

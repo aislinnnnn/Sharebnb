@@ -7,7 +7,8 @@ import { withRouter } from 'react-router-dom';
 const msp = state => {
   return{
     reviews: state.entities.reviews,
-    currentUser: state.session.currentUser
+    currentUser: state.session.currentUser,
+    currentModal: state.ui.modal.currentModal
   };
 };
 
