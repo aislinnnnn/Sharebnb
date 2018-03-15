@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import { merge } from 'lodash';
+import StarRatingComponent from 'react-star-rating-component';
 
 
 class BookingForm extends React.Component{
@@ -60,7 +61,23 @@ class BookingForm extends React.Component{
     return(
       <div className="booking-form">
         <div className="price-div">
-          <h1 className="book-price">${this.props.spot.price}</h1><p className="small-booking">per night</p>
+          <div>
+            <div className="flex">
+              <h1 className="book-price">${this.props.spot.price}</h1><p className="small-booking">per night</p>
+            </div>
+            <div style={{fontSize:12}} className="average-rating-show">
+              <StarRatingComponent
+                style={{padding:'20px'}}
+                name="star"
+                editing={false}
+                starCount={5}
+                value={this.props.spot.average_rating}
+                starColor={'#008489'}
+                emptyStarColor={'#dce0e0'}
+                starSpacing="5px"
+                />
+            </div>
+          </div>
         </div>
         <div
           className="form-container">

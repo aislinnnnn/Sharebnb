@@ -89,3 +89,7 @@
 .explore-container {
   display: flex;
 }
+
+.average-rating-index {
+  margin-top:3px;
+}

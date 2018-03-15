@@ -18,4 +18,8 @@ class Review < ApplicationRecord
     end
   end
 
+  def average_rating
+    (self.accuracy + self.communication + self.cleanliness + self.location + self.checkin + self.value)/6
+  end
+
 end
