@@ -99,7 +99,7 @@ button.modal-button:hover {
 .nav-bar {
   background: white;
   height: 80px;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid #dce0e0;
   display: flex;
   justify-content: space-between;
   text-decoration: none;

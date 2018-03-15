@@ -20,4 +20,4 @@ const mdp = dispatch => {
   };
 };
 
-export default connect(msp, mdp)(ReviewIndex);
+export default withRouter(connect(msp, mdp)(ReviewIndex));

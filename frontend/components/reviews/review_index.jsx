@@ -151,7 +151,7 @@ class ReviewIndex extends React.Component {
               starCount={5}
               value={this.averageRating()}
               starColor={'#008489'}
-              emptyStarColor={'lightgrey'}
+              emptyStarColor={'#dce0e0'}
               starSpacing="5px"
               />
           </div>
@@ -165,7 +165,7 @@ class ReviewIndex extends React.Component {
                 starCount={5}
                 value={this.averageAccuracy()}
                 starColor={'#008489'}
-                emptyStarColor={'lightgrey'}
+                emptyStarColor={'#dce0e0'}
                 />
             </div>
             <div className="rating-left">Communication
@@ -175,7 +175,7 @@ class ReviewIndex extends React.Component {
                 starCount={5}
                 value={this.averageCommunication()}
                 starColor={'#008489'}
-                emptyStarColor={'lightgrey'}
+                emptyStarColor={'#dce0e0'}
                 />
             </div>
             <div className="rating-left">Cleanliness
@@ -185,7 +185,7 @@ class ReviewIndex extends React.Component {
                 starCount={5}
                 value={this.averageCleanliness()}
                 starColor={'#008489'}
-                emptyStarColor={'lightgrey'}
+                emptyStarColor={'#dce0e0'}
                 />
             </div>
           </div>
@@ -197,7 +197,7 @@ class ReviewIndex extends React.Component {
                 starCount={5}
                 value={this.averageLocation()}
                 starColor={'#008489'}
-                emptyStarColor={'lightgrey'}
+                emptyStarColor={'#dce0e0'}
                 />
             </div>
             <div className="rating-right">Check In
@@ -207,7 +207,7 @@ class ReviewIndex extends React.Component {
                 starCount={5}
                 value={this.averageCheckIn()}
                 starColor={'#008489'}
-                emptyStarColor={'lightgrey'}
+                emptyStarColor={'#dce0e0'}
                 />
             </div>
             <div className="rating-right">Value
@@ -217,7 +217,7 @@ class ReviewIndex extends React.Component {
                 starCount={5}
                 value={this.averageValue()}
                 starColor={'#008489'}
-                emptyStarColor={'lightgrey'}
+                emptyStarColor={'#dce0e0'}
                 />
             </div>
           </div>
@@ -233,8 +233,8 @@ class ReviewIndex extends React.Component {
             Write a Review
           </button>
           <Modal
-            className="modal"
-            overlayClassname="overlap"
+            className="review-modal"
+            overlayClassName="review-overlay"
             isOpen={this.props.currentModal === "Review Form"}
             contentLabel="Review Form Modal"
             >
