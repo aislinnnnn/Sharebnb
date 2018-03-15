@@ -4,7 +4,7 @@ class FilterForm extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      adults:1
+      adults:this.props.maxGuests
     };
     this.handleApply = this.handleApply.bind(this);
     this.handleMinus = this.handleMinus.bind(this);
@@ -18,10 +18,12 @@ class FilterForm extends React.Component {
 
 
   handleMinus(){
-    let newAdults = this.state.adults - 1;
-    this.setState({
-      adults: newAdults
-    });
+    if (this.state.adults > 1 ){
+      let newAdults = this.state.adults - 1;
+      this.setState({
+        adults: newAdults
+      });
+    }
   }
 
   handlePlus(){

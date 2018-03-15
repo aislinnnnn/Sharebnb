@@ -124,7 +124,9 @@ button.modal-button:hover {
 
 
 .logo {
-  height: 80px;
+  margin-left: 18px;
+  margin-top: 18px;
+  height: 40px;
 }
 
 .nav-bar-left {

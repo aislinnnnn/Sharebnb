@@ -20,7 +20,7 @@ export default class NavBar extends React.Component {
           <Link to="/">
             <img
               className="logo"
-              src="https://d3ui957tjb5bqd.cloudfront.net/uploads/2015/09/airbnb-2.jpg"
+              src="https://freeiconshop.com/wp-content/uploads/edd/share-flat.png"
             />
           </Link>
           <div className="nav-search-bar">
