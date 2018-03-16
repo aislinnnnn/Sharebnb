@@ -7,6 +7,7 @@ class Spot < ApplicationRecord
     primary_key: :id,
     class_name: :User,
     foreign_key: :host_id
+    
   has_many :bookings
   has_many :reviews
 
@@ -27,7 +28,7 @@ class Spot < ApplicationRecord
   def average_rating
     if self.reviews.length == 0
       return 0
-    end 
+    end
     sum = 0
     self.reviews.each do |review|
       sum += review.average_rating

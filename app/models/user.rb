@@ -4,9 +4,10 @@ class User < ApplicationRecord
   validates :password, length: {minimum:6, allow_nil:true }
 
   has_many :bookings
+
   has_many :spots,
     primary_key: :id,
-    class_name: :Booking,
+    class_name: :Spot,
     foreign_key: :host_id
 
   has_many :reviews,

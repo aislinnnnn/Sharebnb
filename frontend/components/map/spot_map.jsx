@@ -26,7 +26,7 @@ class SpotMap extends React.Component {
       }
     } else {
       mapOptions = {
-        center: { lat: 20, lng:-30 },
+        center: { lat: 25, lng:-43 },
         zoom:2
       };
     }
