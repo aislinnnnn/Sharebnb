@@ -46,6 +46,8 @@ s9 = u9.spots.create!(title:"Great home with private pool available to share!!",
 
 s10 = u10.spots.create!(title:"Inner city 2 bedroom apartment!", location:"Melbourne, Australia", price:89.00, num_guests:3, num_beds: 3, num_baths: 2, num_bedrooms:2, description:"Spacious 2 bedroom apartment is perfect for a vacation or for business. Quiet area, but near lots of attractions. Everything you need for a comfortable stay is supplied", rules:"Check in after 2pm. Check out before 11am. No pets or children allowed. No smoking.", lat:-37.813934, lng: 144.970395, image:"https://melbourne.frasershospitality.com/d/fpmelbourne/media/Images/__thumbs_1050_567_crop/FP-Melbourne-1_c755a8.jpg")
 
+s11 = u1.spots.create!(title:"Beautiful apartment in Gangnam-Gu! Great location!!!", location:"Seoul, South Korea", price:589.00, num_guests:4, num_beds: 2, num_baths: 2, num_bedrooms:2, description:"Come stay at the soul of Seoul!! Great location near lots of attractions. Near downtwon. Great value!!!!", rules:"Check in after 2pm. Check out before 11am. No pets or children allowed. No smoking.", lat:37.495898, lng: 127.038909, image:"https://i.pinimg.com/originals/d7/fa/ac/d7faacc4965eef66bcb175f5e6f09cf6.jpg")
+
 date1 = Date.new(2018,5,5)
 date2 = Date.new(2018,5,7)
 date3 = Date.new(2019,6,20)
