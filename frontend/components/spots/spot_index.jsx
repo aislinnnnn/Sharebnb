@@ -41,7 +41,6 @@ export default class SpotIndex extends React.Component {
                     </div>
                     <div className="homes-search">Search Homes</div>
                   </div>
-
                 </Link>
               </div>
               <div>
@@ -54,7 +53,6 @@ export default class SpotIndex extends React.Component {
                     </div>
                     <div className="homes-search">New York</div>
                   </div>
-
                 </Link>
               </div>
               <div>
@@ -67,7 +65,18 @@ export default class SpotIndex extends React.Component {
                     </div>
                     <div className="homes-search">San Fransisco</div>
                   </div>
-
+                </Link>
+              </div>
+              <div>
+                <Link to="/search/?lat=53.3498053&lng=-6.260309699999993">
+                  <div className="search-link">
+                    <div>
+                      <img
+                        className="homes-search-img"
+                        src="https://www.independent.ie/life/travel/article34947145.ece/ALTERNATES/h342/Cliffs%20of%20moher.jpg" />
+                    </div>
+                    <div className="homes-search">Dublin</div>
+                  </div>
                 </Link>
               </div>
             </div>
