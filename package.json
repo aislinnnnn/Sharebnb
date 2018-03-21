@@ -44,6 +44,6 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^0.28.10",
-    "redux-logger": "^3.0.6",
+    "redux-logger": "^3.0.6"
   }
 }
