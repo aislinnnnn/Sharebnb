@@ -20,14 +20,11 @@ class SearchBar extends React.Component {
       if (status === 'OK') {
 
         const center = results[0].geometry.location;
-        console.log(center);
         const lat = center.lat();
         const lng = center.lng();
         that.setState({address:""});
         that.props.history.push(`/search/?lat=${lat}&lng=${lng}`);
-      } else {
-        console.log(status);
-      }
+      } 
     });
 
   }
