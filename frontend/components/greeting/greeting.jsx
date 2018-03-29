@@ -79,6 +79,8 @@ class Greeting extends React.Component {
                 overlayClassName="overlay"
                 isOpen={this.props.currentModal === "Sign Up"}
                 contentLabel="Sign Up Modal"
+                shouldCloseOnOverlayClick={true}
+                onRequestClose={this.handleCloseSignupModal}
               >
                 <div
                   className="close-button"
@@ -100,6 +102,8 @@ class Greeting extends React.Component {
                 overlayClassName="overlay"
                 isOpen={this.props.currentModal === "Log In"}
                 contentLabel="Log In Modal"
+                shouldCloseOnOverlayClick={true}
+                onRequestClose={this.handleCloseLoginModal}
               >
                 <div
                   className="close-button"

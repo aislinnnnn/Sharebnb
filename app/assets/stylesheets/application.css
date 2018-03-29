@@ -94,6 +94,11 @@ a.nav-button:hover {
 
 button.modal-button:hover {
   border-bottom: 2px solid grey;
+  cursor:pointer;
+}
+
+button:hover {
+  cursor:pointer;
 }
 
 .nav-bar {
