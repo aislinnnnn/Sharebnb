@@ -2,7 +2,9 @@
 
 [Sharebnb Live](http://sharebnbbb.herokuapp.com/#/)
 
-Sharebnb is a full-stack, single-page application inspired by Airbnb used for booking short-term accomodation.  Sharebnb was built using a PostgreSQL database, a Ruby on Rails backend and React/Redux on the front-end. It features homes that users can view, book and review.  Users can search for homes by location through the search bar or by clicking on a specific home on the map.  Users can also filter the homes by number of guests.  You can use the guest login feature to check it out without going through the signup process.
+Sharebnb is a full-stack, single-page application inspired by Airbnb used for booking short-term accomodation.  Sharebnb was built using a PostgreSQL database, a Ruby on Rails backend and React/Redux on the front-end. It features homes that users can view, book and review.  Users can search for homes by location through the search bar or by clicking on a specific home on the map.  Users can also filter the homes by number of guests.  
+
+A guest login feature is available to check out the website without going through the signup process.
 
 Homepage
 ![Sharebnb homepage](app/assets/images/screenshots/homepage.png)
