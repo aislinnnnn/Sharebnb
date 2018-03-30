@@ -135,6 +135,10 @@ input[type=date]{
   border:none;
 }
 
+.submit-booking:hover {
+  cursor: pointer;
+}
+
 .booking-warning {
   width: 350px;
   font-size: 12px;
@@ -142,4 +146,8 @@ input[type=date]{
   color:#484848;
   margin-left: 28%;
   margin-top: 10px;
+}
+
+.booking-delete-button:hover {
+  cursor: pointer;
 }
