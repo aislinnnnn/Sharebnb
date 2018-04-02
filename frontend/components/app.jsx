@@ -7,6 +7,8 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import { ProtectedRoute, AuthRoute } from "../util/route_util";
 import SearchContainer from './map/search_container';
 import BookingIndexContainer from './bookings/booking_index_container';
+import 'react-dates/initialize';
+
 
 export default class App extends React.Component {
 

@@ -2,7 +2,7 @@
 
 [Sharebnb Live](http://sharebnbbb.herokuapp.com/#/)
 
-Sharebnb is a full-stack, single-page application inspired by Airbnb used for booking short-term accomodation.  Sharebnb was built using a PostgreSQL database, a Ruby on Rails backend and React/Redux on the front-end. It features homes that users can view, book and review.  Users can search for homes by location through the search bar or by clicking on a specific home on the map.  Users can also filter the homes by number of guests.  
+Sharebnb is a full-stack, single-page application inspired by Airbnb used for booking short-term accommodation.  Sharebnb was built using a PostgreSQL database, a Ruby on Rails backend and React/Redux on the front-end. It features homes that users can view, book and review.  Users can search for homes by location through the search bar or by clicking on a specific home on the map.  Users can also filter the homes by number of guests.  
 
 A guest login feature is available to check out the website without going through the signup process.
 
@@ -32,8 +32,8 @@ Home review form
 Each home's show page contains a 'Write a Review' button.  If logged in, a user can click this button and a review form modal will appear.  The user can rate the home from 1 to 5 stars in six selected categories and leave a written description.  Each review will be displayed on the home's show page. The ratings from all reviews for each category will be averaged for each home and displayed at the top of the ratings section.  The average rating for each home will also be displayed with each home's title and price on the home adn search pages.
 
 ## Features
- 
-* User Authentication 
+
+* User Authentication
 * Login/signup forms displayed in modal windows
 * Homes index and show pages
 * Search homes using search bar or map
@@ -46,7 +46,7 @@ Each home's show page contains a 'Write a Review' button.  If logged in, a user 
 
 * Ruby
 * JavaScript
-* HTML/CSS 
+* HTML/CSS
 
 # Frameworks, Libraries, Gems and Services
 
@@ -61,7 +61,7 @@ Each home's show page contains a 'Write a Review' button.  If logged in, a user 
 
 # To Do
 
-Things I plan to work on next: 
+Things I plan to work on next:
 
 * Saved trips feature where users can star homes that they like but do not want to book yet
 * Host profile pages and ratings

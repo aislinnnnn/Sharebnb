@@ -59,6 +59,7 @@ export const fetchBooking = (id) => {
 };
 
 export const createBooking = booking => {
+  debugger
   return dispatch => {
     return BookingAPI.createBooking(booking)
       .then((booking) => {

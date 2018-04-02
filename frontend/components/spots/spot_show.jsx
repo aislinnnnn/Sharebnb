@@ -5,6 +5,7 @@ import BookingFormContainer from '../bookings/booking_form_container';
 import { withRouter } from 'react-router';
 import ReviewIndexContainer from '../reviews/review_index_container';
 
+
 class SpotShow extends React.Component {
 
   componentDidMount() {

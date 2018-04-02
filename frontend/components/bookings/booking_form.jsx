@@ -2,14 +2,20 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import { merge } from 'lodash';
 import StarRatingComponent from 'react-star-rating-component';
+import momentPropTypes from 'react-moment-proptypes';
+import moment from 'moment';
+import { DateRangePicker } from 'react-dates';
+import omit from 'lodash/omit';
 
+import 'react-dates/initialize';
 
 class BookingForm extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      check_in: "",
-      check_out: "",
+      startDate: null,
+      endDate: null,
+      focusedInput: null,
       num_guests: 1
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,12 +26,21 @@ class BookingForm extends React.Component{
   }
 
   handleSubmit(e) {
+    debugger;
     e.preventDefault();
+    const start = this.state.startDate._d;
+    const end = this.state.endDate._d;
+
     if (this.props.currentUser) {
       const booking = merge({},
-        this.state,
-        {spot_id:this.props.spot.id, user_id:this.props.currentUser.id}
+        {spot_id:this.props.spot.id,
+          user_id:this.props.currentUser.id,
+          check_in:start,
+          check_out:end,
+          num_guests:this.state.num_guests
+        }
       );
+      debugger;
 
       this.props.createBooking(booking)
         .then((newBooking) => {
@@ -85,26 +100,15 @@ class BookingForm extends React.Component{
 
             onSubmit={this.handleSubmit}
             >
-            <div className="book-input-container">
-              <div>
-                <label className="small-booking">Dates</label>
-                <div className="date-input">
-                  <div className="checkin">
-                    <input
-                      type="date"
-                      value={check_in}
-                      onChange={this.update('check_in')}
-                      />
-                  </div>
-                  <div className="checkout">
-                    <input
-                      type="date"
-                      value={check_out}
-                      onChange={this.update('check_out')}
-                      />
-                  </div>
-                </div>
-              </div>
+            <DateRangePicker
+              startDate={this.state.startDate}
+              startDateId="start_date"
+              endDate={this.state.endDate}
+              endDateId="end_date"
+              onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
+              focusedInput={this.state.focusedInput}
+              onFocusChange={focusedInput => this.setState({ focusedInput })}
+              />
               <div className="guest-input-container">
                 <label className="small-booking-guest">Guests</label>
                 <div >
@@ -118,7 +122,6 @@ class BookingForm extends React.Component{
                   </div>
                 </div>
               </div>
-            </div>
             {this.renderErrors()}
             <input
               className="submit-booking"
@@ -134,3 +137,28 @@ class BookingForm extends React.Component{
 }
 
 export default withRouter(BookingForm);
+
+
+
+
+// <div className="book-input-container">
+//   <div>
+//     <label className="small-booking">Dates</label>
+//     <div className="date-input">
+//       <div className="checkin">
+//         <input
+//           type="date"
+//           value={check_in}
+//           onChange={this.update('check_in')}
+//           />
+//       </div>
+//       <div className="checkout">
+//         <input
+//           type="date"
+//           value={check_out}
+//           onChange={this.update('check_out')}
+//           />
+//       </div>
+//     </div>
+//   </div>
+// </div>
