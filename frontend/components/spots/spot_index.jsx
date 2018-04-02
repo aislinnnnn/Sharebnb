@@ -13,7 +13,7 @@ export default class SpotIndex extends React.Component {
   renderSpots() {
     const spots = Object.values(this.props.spots);
 
-    return spots.map((spot)=> {
+    return spots.map((spot, idx)=> {
       return <div className="spot"><SpotIndexItem spot={spot} /></div>;
     });
   }

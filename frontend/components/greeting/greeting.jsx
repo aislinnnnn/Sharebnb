@@ -19,6 +19,10 @@ class Greeting extends React.Component {
     this.handleCloseSignupModal = this.handleCloseSignupModal.bind(this);
   }
 
+  componentWillMount() {
+    Modal.setAppElement('body');
+ }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.logout();

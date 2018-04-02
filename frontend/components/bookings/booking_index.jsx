@@ -10,8 +10,8 @@ class BookingIndex extends React.Component {
 
   renderBookings() {
     const bookings = Object.values(this.props.bookings);
-    return bookings.map((booking)=> {
-      return <div className="single-booking"><BookingIndexItem booking={booking} deleteBooking={this.props.deleteBooking} /></div>;
+    return bookings.map((booking, idx)=> {
+      return <div key={`${idx}`} className="single-booking"><BookingIndexItem booking={booking} deleteBooking={this.props.deleteBooking} /></div>;
     });
   }
 
