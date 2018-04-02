@@ -133,7 +133,7 @@
   padding: 6px
 }
 .SingleDatePickerInput_clearDate__hide {
-  visibility: hidden
+  visibility: visible;
 }
 .SingleDatePickerInput_clearDate_svg {
   fill: #82888a;

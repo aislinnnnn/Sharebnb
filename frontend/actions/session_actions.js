@@ -26,13 +26,11 @@ export const clearErrors = () => {
 
 export const login = user => {
   return dispatch => {
-    debugger
     return SessionAPI.login(user).then(
       currentUser => {
         return dispatch(receiveCurrentUser(currentUser));
       },
       err => {
-        debugger;
         return dispatch(receiveSessionErrors(err.responseJSON));
       }
     );

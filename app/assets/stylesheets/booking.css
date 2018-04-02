@@ -118,6 +118,7 @@ input[type=date]{
    margin: 25px;
    border: .5px solid #dce0e0;
    border-radius: 2px;
+   overflow: visible;
  }
 
 .submit-booking {
@@ -150,4 +151,8 @@ input[type=date]{
 
 .booking-delete-button:hover {
   cursor: pointer;
+}
+
+.DateInput_input {
+  width:80%;
 }

@@ -26,7 +26,6 @@ class BookingForm extends React.Component{
   }
 
   handleSubmit(e) {
-    debugger;
     e.preventDefault();
     const start = this.state.startDate._d;
     const end = this.state.endDate._d;
@@ -40,7 +39,6 @@ class BookingForm extends React.Component{
           num_guests:this.state.num_guests
         }
       );
-      debugger;
 
       this.props.createBooking(booking)
         .then((newBooking) => {
@@ -108,6 +106,10 @@ class BookingForm extends React.Component{
               onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })}
               focusedInput={this.state.focusedInput}
               onFocusChange={focusedInput => this.setState({ focusedInput })}
+              startDatePlaceholderText="Check In"
+              endDatePlaceholderText="Check Out"
+              hideKeyboardShortcutsPanel={true}
+              showClearDates={true}
               />
               <div className="guest-input-container">
                 <label className="small-booking-guest">Guests</label>

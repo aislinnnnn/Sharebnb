@@ -22,9 +22,7 @@ class Api::BookingsController < ApplicationController
   end
 
   def create
-    debugger
     @booking = Booking.new(booking_params)
-    debugger
 
     if @booking.save
       render "api/bookings/show"
