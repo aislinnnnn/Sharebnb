@@ -15,14 +15,14 @@ export default class SpotIndex extends React.Component {
     const spots = Object.values(this.props.spots);
 
     return spots.map((spot, idx)=> {
-      return <SpotIndexItem spot={spot} idx={idx} />;
+      return <div key={`${idx}`}><SpotIndexItem spot={spot} key={`${idx}`} /></div>;
     });
   }
 
 
   render(){
       return(
-        <div key="spit-index"className="spot-index">
+        <div className="spot-index">
           <h1 className="spots-index">Explore Sharebnb</h1>
           <h1 className="homes-header">Homes around the world</h1>
           {this.renderSpots()}

@@ -4,7 +4,7 @@ import StarRatingComponent from 'react-star-rating-component';
 
 function SpotIndexItem(props) {
   return (
-    <div key={`${props.key}1`}>
+    <div>
       <Link className="spot-item" to={`/spots/${props.spot.id}`}>
         <ul className="spot-item">
           <img className="index-img" src={props.spot.image_url} />

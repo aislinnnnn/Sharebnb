@@ -27,28 +27,28 @@ class BookingForm extends React.Component{
 
   handleSubmit(e) {
     e.preventDefault();
-    const start = this.state.startDate._d;
-    const end = this.state.endDate._d;
+    if (this.state.startDate && this.state.endDate){
+      const start = this.state.startDate._d;
+      const end = this.state.endDate._d;
 
-    if (this.props.currentUser) {
-      const booking = merge({},
-        {spot_id:this.props.spot.id,
-          user_id:this.props.currentUser.id,
-          check_in:start,
-          check_out:end,
-          num_guests:this.state.num_guests
-        }
-      );
+      if (this.props.currentUser) {
+        const booking = merge({},
+          {spot_id:this.props.spot.id,
+            user_id:this.props.currentUser.id,
+            check_in:start,
+            check_out:end,
+            num_guests:this.state.num_guests
+          }
+        );
 
-      this.props.createBooking(booking)
+        this.props.createBooking(booking)
         .then((newBooking) => {
           this.props.history.push(`/bookings`);
         });
-    } else {
-      this.props.receiveCurrentModal("Log In");
+      } else {
+        this.props.receiveCurrentModal("Log In");
+      }
     }
-
-
   }
 
   update(field) {
