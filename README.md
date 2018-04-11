@@ -48,7 +48,7 @@ Each home's show page contains a 'Write a Review' button.  If logged in, a user 
 * JavaScript
 * HTML/CSS
 
-# Frameworks, Libraries, Gems and Services
+## Frameworks, Libraries, Gems and Services
 
 * Rails
 * React
@@ -59,7 +59,7 @@ Each home's show page contains a 'Write a Review' button.  If logged in, a user 
 * Jbuilder
 * BCrypt
 
-# To Do
+## To Do
 
 Things I plan to work on next:
 
