@@ -59,7 +59,9 @@ export const fetchBooking = (id) => {
 };
 
 export const createBooking = booking => {
+
   return dispatch => {
+
     return BookingAPI.createBooking(booking)
       .then((booking) => {
         return dispatch(receiveBooking(booking));

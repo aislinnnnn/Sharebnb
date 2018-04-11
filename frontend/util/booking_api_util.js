@@ -13,6 +13,7 @@ export const fetchBooking = (id) => {
  };
 
 export const createBooking = (booking) => {
+   
   return $.ajax({
     url: '/api/bookings',
     method: 'POST',
