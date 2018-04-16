@@ -24,9 +24,8 @@ class SearchBar extends React.Component {
         const lng = center.lng();
         that.setState({address:""});
         that.props.history.push(`/search/?lat=${lat}&lng=${lng}`);
-      } 
+      }
     });
-
   }
 
   update(){
@@ -38,7 +37,8 @@ class SearchBar extends React.Component {
       <div className="search-bar">
         <form onSubmit={this.handleSubmit}>
           <div  className="search">
-            <img className="search-icon" src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png" />
+            <img className="search-icon"
+              src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png" />
             <input
               className="search-input"
               placeholder={this.props.placeholder}

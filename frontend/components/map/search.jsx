@@ -8,8 +8,6 @@ import { withRouter } from 'react-router-dom';
 
 class Search extends React.Component {
   render() {
-
-
     return(
       <div>
         <div>
@@ -17,7 +15,6 @@ class Search extends React.Component {
         </div>
         <div className="search">
           <div className="search-index">
-
             <SearchIndex  spots={this.props.spots} />
           </div>
           <div className="spot-map">
@@ -28,15 +25,6 @@ class Search extends React.Component {
       </div>
     );
   }
-
 }
 
 export default withRouter(Search);
-
-
-//   <div className="filter-form">
-//     <FilterForm
-//       maxGuests={this.props.maxGuests}
-//       updateFilter={this.props.updateFilter}
-// />
-//   </div>

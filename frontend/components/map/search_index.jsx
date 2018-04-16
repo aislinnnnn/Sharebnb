@@ -5,7 +5,6 @@ import { withRouter } from 'react-router-dom';
 class SearchIndex extends React.Component {
 
   renderSpots() {
-
     const spots = Object.values(this.props.spots);
 
     return spots.map((spot)=> {
@@ -28,5 +27,3 @@ class SearchIndex extends React.Component {
 }
 
 export default withRouter(SearchIndex);
-
-// <h1>Explore {Object.keys(this.props.spots).length} homes</h1>
