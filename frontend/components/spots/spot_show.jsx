@@ -43,7 +43,7 @@ class SpotShow extends React.Component {
                 <p className="show-thin">{spot.rules}</p>
               </div>
               <div className="info-container">
-                <ReviewIndexContainer />
+                <ReviewIndexContainer spot={this.props.spot} />
               </div>
               <div className="info-container">
                 <h1 className="show-bold-big">The Neighborhood</h1>

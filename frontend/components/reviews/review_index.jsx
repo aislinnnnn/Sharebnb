@@ -29,7 +29,9 @@ class ReviewIndex extends React.Component {
   }
 
   componentDidMount(){
+
     this.props.fetchReviews(this.props.match.params.id);
+    this.props.fetchSpot(this.props.match.params.id);
   }
 
   renderReviews() {
@@ -40,97 +42,7 @@ class ReviewIndex extends React.Component {
     });
   }
 
-  averageAccuracy() {
-
-    const reviews = Object.values(this.props.reviews);
-    let numReviews = reviews.length;
-    if (numReviews > 0 ){
-      let sum = 0;
-
-      reviews.forEach((review) => {
-        sum += review.accuracy;
-      });
-      return round(sum/numReviews, 2);
-    }
-  }
-
-  averageCommunication() {
-    const reviews = Object.values(this.props.reviews);
-    let numReviews = reviews.length;
-    if (numReviews > 0 ){
-      let sum = 0;
-
-      reviews.forEach((review) => {
-        sum += review.communication;
-      });
-      return round(sum/numReviews, 2);
-    }
-  }
-  averageCleanliness() {
-    const reviews = Object.values(this.props.reviews);
-    let numReviews = reviews.length;
-    if (numReviews > 0 ){
-      let sum = 0;
-
-      reviews.forEach((review) => {
-        sum += review.cleanliness;
-      });
-      return round(sum/numReviews, 2);
-    }
-  }
-  averageLocation() {
-    const reviews = Object.values(this.props.reviews);
-    let numReviews = reviews.length;
-    if (numReviews > 0 ){
-      let sum = 0;
-
-      reviews.forEach((review) => {
-        sum += review.location;
-      });
-      return round(sum/numReviews, 2);
-    }
-  }
-  averageCheckIn() {
-    const reviews = Object.values(this.props.reviews);
-    let numReviews = reviews.length;
-    if (numReviews > 0 ){
-      let sum = 0;
-
-      reviews.forEach((review) => {
-        sum += review.checkin;
-      });
-      return round(sum/numReviews, 2);
-    }
-  }
-  averageValue() {
-    const reviews = Object.values(this.props.reviews);
-    let numReviews = reviews.length;
-    if (numReviews > 0 ){
-      let sum = 0;
-
-      reviews.forEach((review) => {
-        sum += review.value;
-      });
-      return round(sum/numReviews, 2);
-    }
-  }
-
-  averageRating() {
-    const reviews = Object.values(this.props.reviews);
-    let numReviews = reviews.length;
-    if (numReviews > 0 ) {
-      let average = (this.averageAccuracy()
-      + this.averageCommunication()
-      + this.averageCleanliness()
-      + this.averageLocation()
-      + this.averageCheckIn()
-      + this.averageValue())
-      /6;
-
-      return round(average, 2);
-    }
-  }
-
+  
   render() {
     const numReviews = Object.keys(this.props.reviews).length;
     let reviewText;
@@ -139,6 +51,7 @@ class ReviewIndex extends React.Component {
     } else {
       reviewText = "Reviews";
     }
+
     return(
       <div className="review-index-container">
         <div className="review-header">
@@ -149,7 +62,7 @@ class ReviewIndex extends React.Component {
               name="star"
               editing={false}
               starCount={5}
-              value={this.averageRating()}
+              value={this.props.spot.average_rating}
               starColor={'#008489'}
               emptyStarColor={'#dce0e0'}
               starSpacing="5px"
@@ -163,7 +76,7 @@ class ReviewIndex extends React.Component {
                 name="star"
                 editing={false}
                 starCount={5}
-                value={this.averageAccuracy()}
+                value={this.props.spot.average_accuracy}
                 starColor={'#008489'}
                 emptyStarColor={'#dce0e0'}
                 />
@@ -173,7 +86,7 @@ class ReviewIndex extends React.Component {
                 name="star"
                 editing={false}
                 starCount={5}
-                value={this.averageCommunication()}
+                value={this.props.spot.average_communication}
                 starColor={'#008489'}
                 emptyStarColor={'#dce0e0'}
                 />
@@ -183,7 +96,7 @@ class ReviewIndex extends React.Component {
                 name="star"
                 editing={false}
                 starCount={5}
-                value={this.averageCleanliness()}
+                value={this.props.spot.average_cleanliness}
                 starColor={'#008489'}
                 emptyStarColor={'#dce0e0'}
                 />
@@ -195,7 +108,7 @@ class ReviewIndex extends React.Component {
                 name="star"
                 editing={false}
                 starCount={5}
-                value={this.averageLocation()}
+                value={this.props.spot.average_location}
                 starColor={'#008489'}
                 emptyStarColor={'#dce0e0'}
                 />
@@ -205,7 +118,7 @@ class ReviewIndex extends React.Component {
                 name="star"
                 editing={false}
                 starCount={5}
-                value={this.averageCheckIn()}
+                value={this.props.spot.average_checkin}
                 starColor={'#008489'}
                 emptyStarColor={'#dce0e0'}
                 />
@@ -215,7 +128,7 @@ class ReviewIndex extends React.Component {
                 name="star"
                 editing={false}
                 starCount={5}
-                value={this.averageValue()}
+                value={this.props.spot.average_value}
                 starColor={'#008489'}
                 emptyStarColor={'#dce0e0'}
                 />

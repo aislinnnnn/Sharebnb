@@ -7,7 +7,7 @@ class Spot < ApplicationRecord
     primary_key: :id,
     class_name: :User,
     foreign_key: :host_id
-    
+
   has_many :bookings
   has_many :reviews
 
@@ -37,5 +37,33 @@ class Spot < ApplicationRecord
 
   end
 
+  def average_accuracy
+    spot_id = self.id
+    Review.where("spot_id = ?", spot_id).average(:accuracy).to_f
+  end
 
+  def average_communication
+    spot_id = self.id
+    Review.where("spot_id = ?", spot_id).average(:communication).to_f
+  end
+
+  def average_cleanliness
+    spot_id = self.id
+    Review.where("spot_id = ?", spot_id).average(:cleanliness).to_f
+  end
+
+  def average_location
+    spot_id = self.id
+    Review.where("spot_id = ?", spot_id).average(:location).to_f
+  end
+
+  def average_checkin
+    spot_id = self.id
+    Review.where("spot_id = ?", spot_id).average(:checkin).to_f
+  end
+
+  def average_value
+    spot_id = self.id
+    Review.where("spot_id = ?", spot_id).average(:value).to_f
+  end
 end

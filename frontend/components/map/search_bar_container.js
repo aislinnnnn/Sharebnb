@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { updateFilters } from '../../actions/filter_actions';
 
 const mdp = dispatch => {
-  debugger;
+  
   return({
     updateFilters: (filter, value) =>  dispatch(updateFilters(filter, value))
   });

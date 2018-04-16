@@ -22,4 +22,10 @@ class Review < ApplicationRecord
     (self.accuracy + self.communication + self.cleanliness + self.location + self.checkin + self.value)/6
   end
 
+  def average_accuracy
+    spot_id = self.spot_id
+    Review.where("spot_id = ?", spot_id).average(:accuracy).to_f
+  end
+
+
 end

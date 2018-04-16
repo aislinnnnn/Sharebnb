@@ -2,7 +2,6 @@ import React from 'react';
 import SearchBarContainer from '../map/search_bar_container';
 
 const GreetingSearch = () => {
-  debugger;
   return(
     <div className="hero-image">
       <div className="hero-content">

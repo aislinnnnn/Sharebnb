@@ -2,12 +2,8 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import { merge } from 'lodash';
 import StarRatingComponent from 'react-star-rating-component';
-import momentPropTypes from 'react-moment-proptypes';
 import moment from 'moment';
 import { DateRangePicker } from 'react-dates';
-import omit from 'lodash/omit';
-
-import 'react-dates/initialize';
 
 class BookingForm extends React.Component{
   constructor(props) {
@@ -28,29 +24,27 @@ class BookingForm extends React.Component{
   handleSubmit(e) {
 
     e.preventDefault();
+    const start = this.state.startDate ? this.state.startDate._d : null;
+    const end = this.state.endDate ? this.state.endDate._d : null;
 
-      const start = this.state.startDate ? this.state.startDate._d : null;
-      const end = this.state.endDate ? this.state.endDate._d : null;
+    if (this.props.currentUser) {
 
-      if (this.props.currentUser) {
+      const booking = merge({},
+        {spot_id:this.props.spot.id,
+          user_id:this.props.currentUser.id,
+          check_in:start,
+          check_out:end,
+          num_guests:this.state.num_guests
+        }
+      );
 
-        const booking = merge({},
-          {spot_id:this.props.spot.id,
-            user_id:this.props.currentUser.id,
-            check_in:start,
-            check_out:end,
-            num_guests:this.state.num_guests
-          }
-        );
-
-        this.props.createBooking(booking)
+      this.props.createBooking(booking)
         .then((newBooking) => {
-
           this.props.history.push(`/bookings`);
         });
-      } else {
-        this.props.receiveCurrentModal("Log In");
-      }
+    } else {
+      this.props.receiveCurrentModal("Log In");
+    }
   }
 
   update(field) {
@@ -141,28 +135,3 @@ class BookingForm extends React.Component{
 }
 
 export default withRouter(BookingForm);
-
-
-
-
-// <div className="book-input-container">
-//   <div>
-//     <label className="small-booking">Dates</label>
-//     <div className="date-input">
-//       <div className="checkin">
-//         <input
-//           type="date"
-//           value={check_in}
-//           onChange={this.update('check_in')}
-//           />
-//       </div>
-//       <div className="checkout">
-//         <input
-//           type="date"
-//           value={check_out}
-//           onChange={this.update('check_out')}
-//           />
-//       </div>
-//     </div>
-//   </div>
-// </div>
