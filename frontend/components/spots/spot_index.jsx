@@ -23,6 +23,7 @@ export default class SpotIndex extends React.Component {
       const searchContent = this.props.currentUser ?
       null :
       <GreetingSearch />;
+      
       return(
         <div>
           <div>

@@ -1,12 +1,13 @@
 import React from 'react';
-import SearchBar from '../map/search_bar';
+import SearchBarContainer from '../map/search_bar_container';
 
 const GreetingSearch = () => {
+  debugger;
   return(
     <div className="hero-image">
       <div className="hero-content">
         <h1 className="hero-text">Explore homes available to share all over the world.</h1>
-        <SearchBar placeholder='Try "New York"'/>
+        <SearchBarContainer placeholder='Try "New York"'/>
       </div>
     </div>
   );

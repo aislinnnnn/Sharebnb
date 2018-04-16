@@ -13,6 +13,7 @@ class SearchBar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    debugger;
     const geocoder = new google.maps.Geocoder();
     const address = this.state.address;
     const that = this;
@@ -33,6 +34,7 @@ class SearchBar extends React.Component {
   }
 
   render() {
+    debugger;
     return(
       <div className="search-bar">
         <form onSubmit={this.handleSubmit}>

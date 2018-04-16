@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { Link, withRouter } from "react-router-dom";
 import LoginFormContainer from "../session/login_form_container";
 import SignupFormContainer from "../session/signup_form_container";
-import SearchBar from '../map/search_bar';
+import SearchBarContainer from '../map/search_bar_container';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -53,7 +53,7 @@ class Greeting extends React.Component {
   render() {
       const searchContent = (this.props.location.pathname === '/') ?
         null :
-        <SearchBar placeholder="Anywhere &middot; Homes" />;
+        <SearchBarContainer placeholder="Anywhere &middot; Homes" />;
 
       return (
           <div className="nav-bar">
@@ -124,5 +124,3 @@ class Greeting extends React.Component {
   }
 
 export default withRouter(Greeting);
-// <Link to="/login">Log In</Link>
-// <Link to="/signup">Sign Up</Link>
