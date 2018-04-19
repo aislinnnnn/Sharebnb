@@ -11,12 +11,10 @@ class FilterForm extends React.Component {
     this.handlePlus = this.handlePlus.bind(this);
   }
 
-
   handleApply(e) {
     this.props.updateFilters('maxGuests', this.state.adults);
     this.props.receiveCurrentModal(null);
   }
-
 
   handleMinus(){
     if (this.state.adults > 1 ){

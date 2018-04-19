@@ -11,7 +11,6 @@ class FilterBar extends React.Component {
 
   handleOpenFilterModal() {
     this.props.receiveCurrentModal("Filter Form");
-
   }
 
   render(){

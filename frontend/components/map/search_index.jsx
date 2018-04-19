@@ -14,7 +14,6 @@ class SearchIndex extends React.Component {
     });
   }
 
-
   render(){
       return(
         <div className="search-index">

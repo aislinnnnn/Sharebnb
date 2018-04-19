@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import moment from 'moment';
 
 class ReviewIndexItem extends React.Component {
   constructor(props){
@@ -12,56 +13,18 @@ class ReviewIndexItem extends React.Component {
     this.props.deleteReview(this.props.review.id);
   }
 
-  parseDate(date) {
-    
-    const splitDate = date.split("-");
-    const year = splitDate[0];
-    const monthNum = parseInt(splitDate[1]);
-    const day = splitDate[2];
-
-    let month;
-    switch (monthNum) {
-      case 1:
-        month = 'January';
-        break;
-      case 2:
-        month = 'February';
-        break;
-      case 3:
-        month = 'March';
-        break;
-      case 4:
-        month = 'April';
-        break;
-      case 5:
-        month = 'May';
-        break;
-      case 6:
-        month = 'June';
-        break;
-      case 7:
-        month = 'July';
-        break;
-      case 8:
-        month = 'August';
-        break;
-      case 9:
-        month = 'September';
-        break;
-      case 10:
-        month = 'October';
-        break;
-      case 11:
-        month = 'November';
-        break;
-      case 12:
-        month = 'December';
-        break;
-    }
+  parseDate(date){
+    let dated = moment(date);
+    let day = dated.day();
+    let year = dated.year();
+    let monthNum = dated.month();
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
+                    'October', 'November', 'December'];
+    let month = months[monthNum];
 
     return month.concat(' ').concat(day).concat(', ').concat(year);
-
   }
+
 
   capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);

@@ -55,7 +55,6 @@ class SpotMap extends React.Component {
         const parsedCenter = {lat: lat, lng:lng};
 
         if ((Object.keys(center).length!== 0) && (newCenter.center.lat !== oldCenter.center.lat)){
-
           this.map.setCenter(parsedCenter);
           this.map.setZoom(12);
         }
